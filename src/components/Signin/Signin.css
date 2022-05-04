@@ -1,0 +1,35 @@
+body{
+    margin: 2rem;
+}
+
+.Signin-outerouter{
+    margin: 0 auto;
+}
+
+.Signin-outer{
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(153,153,153,1) 100%);
+    width: 20rem;
+    height: 23rem;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.SignIn-Title{
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+.SignIn-Inputs{
+    padding: 20px;
+    margin: 20px;
+}
+
+.form-username{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.form-password{
+    margin-bottom: 30px;
+    
+}
