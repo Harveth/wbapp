@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import Signin from './components/Signin/Signin';
+import Signup from './components/Signup/Signup';
 
 class App extends Component {
   constructor(){
@@ -37,10 +38,10 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <h1>app lol</h1>
-          <div className='Signin-wrap'>
+          {/*<div className='Signin-wrap'>
             <Signin sendData={this.setUsername}/>
-          </div>
+          </div>*/}
+          <Signup></Signup>
         
       </div>
     );

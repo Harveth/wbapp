@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(D:\MEDIA\tst.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.Signup-Inputs{
+    width: 300px;
+     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+     background: rgb(255, 255, 255);
+     padding:21px;
+     margin: 8% auto 0;
+     text-align: center;
+     border-radius: 20px;
+     
+}
+.Signup-Inputs h1{
+    margin-top:5px;
+    margin-bottom: 30px;
+}
+.smol{
+    margin:0px;
+    font-size: 13px;
+}
+.input-box{
+    border-radius: 20px;
+    padding: 9px;
+    margin: 5px 0;
+    width: 90%;
+    border: 1.5px solid #999;
+    outline: none;
+}
+.signup-btn{
+    background-color: rgb(0, 128, 233);;
+    color: rgb(255, 255, 255);
+    width:70%;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 10px 0;
+    border:none;
+    outline: none;
+    cursor:pointer;
+}
