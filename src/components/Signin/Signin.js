@@ -24,6 +24,8 @@ class Signin extends Component{
         .then(data => {
             if(data === 'yes')
                 console.log("you logged in");
+            else if(data === 'no')
+                console.log("you failed to log in");
         })
 
         this.props.sendData(this.state.signInUsername, this.state.signInPassword);
@@ -47,7 +49,7 @@ class Signin extends Component{
             <div className='SignIn-outerouter'>
                 <div className="Signin-outer">
                 <h1 className="SignIn-Title">Sign In</h1>
-                    <div className="SignIn-Inputs"> 
+                    <div className="SignIn-Inputs">
                         <input className="form-username" placeholder="username" onChange={this.onUsernameChange}/><br/>
                         <input className="form-password" placeholder="password" onChange={this.onPasswordChange}/><br/>
                     </div>
