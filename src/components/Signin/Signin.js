@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import './Signin.css'
+import axios from 'axios';
 
+const SERVER = 'http://localhost:6969';
 class Signin extends Component{
     constructor(props){
         super(props);
@@ -10,6 +12,19 @@ class Signin extends Component{
         }
     }
 
+    phpTest = async () => {
+        await axios.post(`${SERVER}/api/login.php`, {
+            email: this.state.signInUsername,
+            password: this.state.signInPassword
+        }).then(res => {
+            if(res.data == 'yes'){
+                console.log('correct sign in!');
+            }
+            else {
+                console.log('incorrect sign in!');
+            }
+        })
+    }
     test = () =>{
         console.log("attempting sign in");
         fetch('http://localhost:6969/signin/', {
@@ -53,7 +68,7 @@ class Signin extends Component{
                         <input className="form-username" placeholder="username" onChange={this.onUsernameChange}/><br/>
                         <input className="form-password" placeholder="password" onChange={this.onPasswordChange}/><br/>
                     </div>
-                    <button className="Signin-btn" onClick={this.test}> Sign In</button>
+                    <button className="Signin-btn" onClick={this.phpTest}> Sign In</button>
                 </div>
             </div>
         );
