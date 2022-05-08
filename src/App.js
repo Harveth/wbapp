@@ -34,16 +34,19 @@ class App extends Component {
     this.setState({user});
   }
 
-  
+
   render(){
     return (
       <div className="App">
-          {/*<div className='Signin-wrap'>
-            <Signin sendData={this.setUsername}/>
-          </div>*/}
-          <Signup></Signup>
-        
+        <Signin></Signin>
       </div>
+      // <div className="App">
+      //     <div className='Signin-wrap'>
+      //       <Signin sendData={this.setUsername}/>
+      //     </div>
+          /* <Signup></Signup> */
+
+      // </div>
     );
   }
 }
