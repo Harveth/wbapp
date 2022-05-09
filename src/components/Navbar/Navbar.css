@@ -1,0 +1,33 @@
+.Navbar{  
+    background: #121212;
+    height: 7vh;
+    width: 100vw;
+}
+.Navbar li{
+    color: white;
+    font-size: 35px;
+    display:inline-block;
+    padding: 10px;
+}
+.Navbar ul{
+    list-style-type:none;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;  
+}
+.Navbar ul li:hover{
+    color: gold;
+}
+.navicon{
+    margin-right: 5px;
+    vertical-align:text-top;
+}
+.logo{
+    
+    float: left;
+    margin: 0;
+    width: 10vw;
+    height: 5vh;
+    padding-top: 5px;
+}
+  
