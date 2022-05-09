@@ -35,13 +35,26 @@ class App extends Component {
     this.setState({user});
   }
 
-  
+
   render(){
     return (
+<<<<<<< HEAD
       <>        
         <Navbar/>
         <Landingpage/>
       </>    
+=======
+      <div className="App">
+        <Signin></Signin>
+      </div>
+      // <div className="App">
+      //     <div className='Signin-wrap'>
+      //       <Signin sendData={this.setUsername}/>
+      //     </div>
+          /* <Signup></Signup> */
+
+      // </div>
+>>>>>>> master
     );
   }
 }
