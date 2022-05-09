@@ -1,6 +1,13 @@
 .Landingpage{
     background-image:url('../../Assets/Images/bg.png');
     background-size:cover;
-    overflow-y: hidden;
+    overflow: hidden;
     height: 100vh;
+    width: 100vw;
+    border: none;
+    z-index: 100;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+  } 
