@@ -20,8 +20,7 @@ class Navbar extends Component {
             <a  href="#Menu"><li><MdOutlineRestaurantMenu className="navicon"/>Menu</li></a>
             <a  href="#Gallery"><li><BiPhotoAlbum className="navicon"/>Gallery</li></a>
             <a  href="#About"><li><BsInfoSquare className="navicon"/>About</li></a>
-            <a  href="#Account"><li><RiAccountCircleLine className="last-child"/></li></a>
-
+            <a  href="#Account" className="account"><li><RiAccountCircleLine /></li></a>
           </ul>
           </nav>
         </div>

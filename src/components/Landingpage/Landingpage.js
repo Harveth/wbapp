@@ -8,7 +8,7 @@ class Landingpage extends Component {
       return (
         <div className='Landingpage'>
           <Navbar/>
-            lol
+          
         </div>
       );
     }

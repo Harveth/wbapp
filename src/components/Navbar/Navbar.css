@@ -2,7 +2,7 @@
     background:rgba(255, 0, 0, 0);
     height: 7vh;
     width: 100vw;
-    
+    align-content: center;
 }
 .Navbar li{
     color: white;
@@ -18,6 +18,9 @@
 .Navbar ul li:hover{
     color: gold;
 }
+.Navbar ul li:active{
+    color: gold;
+}
 .navicon{
     margin-right: 5px;
     vertical-align:text-top;
@@ -31,7 +34,6 @@
     padding-top: 5px;
     border: none;
 }
-.Navbar ul:last-child{
-float: right;
-vertical-align: text-top;
+.account{
+    float: right;
 }
