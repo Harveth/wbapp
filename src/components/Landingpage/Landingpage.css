@@ -1,0 +1,23 @@
+.Landingpage{
+    background-image:url('../../Assets/Images/bg.png');
+    background-size:cover;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    z-index: 100;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.intro{
+    /* border-width: 5px;
+    border-style: outset;
+    border-color: #FFD700;
+    border-radius: 40px 0px 40px 0px; */
+    outline-width: 5px;
+    outline-style: outset;
+    outline-color: #FFD700;
+    outline-offset: 6px;
+} 

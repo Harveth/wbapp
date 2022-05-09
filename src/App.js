@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import './App.css';
-import Signin from './components/Signin/Signin';
-import Signup from './components/Signup/Signup';
-
+import Landingpage from './components/Landingpage/Landingpage';
+import Navbar from './components/Navbar/Navbar';
 class App extends Component {
   constructor(){
     super();
@@ -37,16 +36,9 @@ class App extends Component {
 
   render(){
     return (
-      <div className="App">
-        <Signin></Signin>
-      </div>
-      // <div className="App">
-      //     <div className='Signin-wrap'>
-      //       <Signin sendData={this.setUsername}/>
-      //     </div>
-          /* <Signup></Signup> */
-
-      // </div>
+        <div>
+        <Landingpage/>
+        </div>
     );
   }
 }
