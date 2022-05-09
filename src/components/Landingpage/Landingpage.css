@@ -1,5 +1,5 @@
 .Landingpage{
-    background-image:url("./bg.png");
+    background-image:url('../../Assets/Images/bg.png');
     background-size:cover;
     overflow-y: hidden;
     height: 100vh;

@@ -3,7 +3,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BiPhotoAlbum } from "react-icons/bi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { BsInfoSquare } from "react-icons/bs";
-import logo from './minilogo.png';
+import logo from '../../Assets/Images/minilogo.png';
 import './Navbar.css';
 
 class Navbar extends Component {

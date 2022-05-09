@@ -38,23 +38,10 @@ class App extends Component {
 
   render(){
     return (
-<<<<<<< HEAD
-      <>        
+        <div>
         <Navbar/>
         <Landingpage/>
-      </>    
-=======
-      <div className="App">
-        <Signin></Signin>
-      </div>
-      // <div className="App">
-      //     <div className='Signin-wrap'>
-      //       <Signin sendData={this.setUsername}/>
-      //     </div>
-          /* <Signup></Signup> */
-
-      // </div>
->>>>>>> master
+        </div>
     );
   }
 }
