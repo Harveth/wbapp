@@ -1,23 +1,40 @@
 .Landingpage{
     background-image:url('../../Assets/Images/bg.png');
-    background-size:cover;
-    overflow: hidden;
+    background-repeat: no-repeat;
+    position:fixed;
+}
+.mlogo img{
     height: 100vh;
     width: 100vw;
-    border: none;
-    z-index: 100;
+
 }
-html, body {
-    margin: 0;
-    padding: 0;
+.menu{
+    background-color: aliceblue;
 }
-.intro{
-    /* border-width: 5px;
-    border-style: outset;
-    border-color: #FFD700;
-    border-radius: 40px 0px 40px 0px; */
-    outline-width: 5px;
-    outline-style: outset;
-    outline-color: #FFD700;
-    outline-offset: 6px;
-} 
+.menu p{
+    color: red;
+    float: left;
+    margin-top: 30%;
+    margin-left: 5%;
+
+
+}
+.menu img{
+    margin-top: 11%;
+    margin-right: 5%;
+    width: 30vw;
+    height: 60vh;
+    float: right;
+}
+
+.container{
+    overflow-y: scroll;
+    height: 100vh;
+}
+.container div{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align:center;
+
+}
