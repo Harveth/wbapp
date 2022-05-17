@@ -1,22 +1,25 @@
 .Landingpage{
     background-image:url('../../Assets/Images/bg.png');
-    background-repeat: no-repeat;
-    position:fixed;
+    position: fixed;
 }
 .mlogo img{
-    height: 100vh;
-    width: 100vw;
-
+margin-left: auto;
+margin-right: auto;
+display: block;
+width: 60%;
 }
 .menu{
-    background-color: aliceblue;
+    background-color: rgba(104, 104, 104, 0.5);
+    color: #fff;
 }
 .menu p{
-    color: red;
+    color: goldenrod;
     float: left;
-    margin-top: 30%;
+    margin-top: 20%;
     margin-left: 5%;
-
+    background-color: rgba(0,0,0,1);
+    border-radius: 15px 50px;;
+    border-style: double;
 
 }
 .menu img{
@@ -30,11 +33,27 @@
 .container{
     overflow-y: scroll;
     height: 100vh;
+    width: 100vw;
 }
 .container div{
     height: 100vh;
     width: 100vw;
     color: white;
     text-align:center;
+    
 
 }
+blockquote::before {
+    content: open-quote;
+  }
+  blockquote::after {
+    content: close-quote;
+  }
+  blockquote {
+    quotes: "“" "”" "‘" "’";
+  }
+  
+  body {
+    max-width: 20em;
+    font: 1.8rem/1.4 Georgia, serif;
+  }

@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Button } from 'react-bootstrap';
 import Navbar from '../Navbar/Navbar';
 import './Landingpage.css'
 
@@ -10,14 +11,15 @@ class Landingpage extends Component {
           <Navbar/>
           <div className='container'>
             <div className='mlogo'>
-              <img src={require('../../Assets/Images/main_logo.png')} alt="lol"/>
+              <img src={require('../../Assets/Images/clearbg.png')} alt="lol"/>
             </div>
-            <div className='menu'>
-              <p>
-            Check out the menu!
-            <button>Explore Menu</button>
+            <div className='menu'>  
+            <p className='menuQuote'>
+            <h4>Check out our menu!</h4>
+            <blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+            <Button variant="primary">Menu</Button>
             </p>
-            <img src={require('../../Assets/Images/fish.png')} alt="lol"/>
+            <a href='#Menu'><img src={require('../../Assets/Images/fish.png')} alt="Menu Cover"/></a>
             </div>
             <div>Two</div>
             <div>Three</div>
