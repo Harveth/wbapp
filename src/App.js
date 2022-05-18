@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.css';
 import Landingpage from './components/Landingpage/Landingpage';
 import Navbar from './components/Navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   constructor(){
     super();

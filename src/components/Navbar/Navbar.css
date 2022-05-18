@@ -11,7 +11,7 @@
 }
 .Navbar ul{
     list-style-type:none;
-    text-align: center;
+    /* text-align: center; */
     justify-content: center;
     margin: 0;  
 }
@@ -23,7 +23,6 @@
 }
 .navicon{
     margin-right: 5px;
-    vertical-align:text-top;
 }
 .logo{
     float: left;

@@ -1,6 +1,7 @@
 .Landingpage{
     background-image:url('../../Assets/Images/bg.png');
     position: fixed;
+    
 }
 .mlogo img{
 margin-left: auto;
@@ -13,35 +14,34 @@ width: 60%;
     color: #fff;
 }
 .menu p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:xx-large;
     color: goldenrod;
-    float: left;
-    margin-top: 20%;
-    margin-left: 5%;
     background-color: rgba(0,0,0,1);
     border-radius: 15px 50px;;
     border-style: double;
-
+}
+.menu a, a:link, a:visited {
+  color: goldenrod;
+}
+.menu a:hover{
+  color: gold;
 }
 .menu img{
-    margin-top: 11%;
-    margin-right: 5%;
     width: 30vw;
     height: 60vh;
-    float: right;
 }
 
-.container{
+.Maincontainer{
     overflow-y: scroll;
     height: 100vh;
-    width: 100vw;
 }
-.container div{
-    height: 100vh;
-    width: 100vw;
+.Maincontainer section{
+    min-height: 100%;    
+    height: auto;
     color: white;
     text-align:center;
     
-
 }
 blockquote::before {
     content: open-quote;
