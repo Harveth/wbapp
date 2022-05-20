@@ -23,15 +23,9 @@
 }
 .navicon{
     margin-right: 5px;
+    vertical-align:baseline;
 }
-.logo{
-    float: left;
-    margin: 0;
-    width: 10vw;
-    height: 5vh;
-    padding-top: 5px;
-    border: none;
-}
+
 .account{
     float: right;
 }

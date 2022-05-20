@@ -3,7 +3,6 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BiPhotoAlbum } from "react-icons/bi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import {RiAccountCircleLine} from "react-icons/ri"
-import logo from '../../Assets/Images/minilogo.png';
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -12,9 +11,6 @@ class Navbar extends Component {
         <div className="Navbar">
           <nav>
           <ul>
-            {/* <a href="#Home">
-            <img src={logo} alt="Logo" className="logo" />
-            </a> */}
             <a  href="#Home"><li><AiOutlineHome className="navicon"/>Home</li></a>
             <a  href="#Menu"><li><MdOutlineRestaurantMenu className="navicon"/>Menu</li></a>
             <a  href="#Gallery"><li><BiPhotoAlbum className="navicon"/>Gallery</li></a>
