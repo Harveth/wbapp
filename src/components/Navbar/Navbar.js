@@ -9,26 +9,49 @@ import './Navbar.css';
 class Navbar extends Component {
   render() {
     return (
-        <div className='row navbar'>
-          <ul>
-            <div className='row row-cols-4'>
-            <li className='col'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
+          <div className='container-fluid'>
+            <div className='navbar'>
+            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+            <li className='nav-item'>
               <Link to="/home" style={{ textDecoration: "none" }}><AiOutlineHome className="navicon" />Home</Link>
             </li>
-            <li className='col'>
+            <li className='nav-item'>
               <Link to="/menu" style={{ textDecoration: "none" }}><MdOutlineRestaurantMenu className="navicon" />Menu</Link>
             </li>
-            <li className='col'>
+            <li className='nav-item'>
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
             </li>
-            <li className='col text-right'>
-              <Link to="/account" className="account" style={{ textDecoration: "none", float:"right"}}><RiAccountCircleLine /></Link>
+            </ul>
+            <ul className='navbar-nav ms-2 ms-lg me-4 mb-4'>
+            <li className=''>
+              <Link to="/account" className="account navbar-nav ms-auto mb-2 mb-lg-0"><RiAccountCircleLine /></Link>
             </li>
+            </ul>
             </div>
-          </ul>
-        </div>
 
-      
+            </div>
+        </nav>
+        // <div className='row navbar'>
+        //   <ul>
+        //     <div className='row'>
+        //     <li className='col'>
+        //       <Link to="/home" style={{ textDecoration: "none" }}><AiOutlineHome className="navicon" />Home</Link>
+        //     </li>
+        //     <li className='col'>
+        //       <Link to="/menu" style={{ textDecoration: "none" }}><MdOutlineRestaurantMenu className="navicon" />Menu</Link>
+        //     </li>
+        //     <li className='col'>
+        //       <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
+        //     </li>
+        //     <li className='col align-content-end' style={{textAlign: 'right'}}>
+        //       <Link to="/account" className="account" style={{ textDecoration: "none", float:"right"}}><RiAccountCircleLine /></Link>
+        //     </li>
+        //     </div>
+        //   </ul>
+        // </div>
+
+
       // <div className="Navbar">
       //   <nav>
       //   <ul className='col'>

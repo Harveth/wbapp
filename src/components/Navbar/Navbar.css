@@ -1,10 +1,10 @@
-/* .Navbar{  
+/* .Navbar{
     min-height: 5vh;
     height: auto;
     width: 100vw;
     background-color: #121212;
     padding: none;
-    
+
 }
 .navbar {
     margin: -1% -1% 1% -1%;
@@ -41,7 +41,8 @@
     vertical-align: baseline;
 } */
 .navbar{
-   width: 100vw; 
+   width: 100vw;
+   background-color: transparent;
 }
 .account{
     font-size: 35px;
