@@ -32,44 +32,6 @@ class Navbar extends Component {
 
             </div>
         </nav>
-        // <div className='row navbar'>
-        //   <ul>
-        //     <div className='row'>
-        //     <li className='col'>
-        //       <Link to="/home" style={{ textDecoration: "none" }}><AiOutlineHome className="navicon" />Home</Link>
-        //     </li>
-        //     <li className='col'>
-        //       <Link to="/menu" style={{ textDecoration: "none" }}><MdOutlineRestaurantMenu className="navicon" />Menu</Link>
-        //     </li>
-        //     <li className='col'>
-        //       <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
-        //     </li>
-        //     <li className='col align-content-end' style={{textAlign: 'right'}}>
-        //       <Link to="/account" className="account" style={{ textDecoration: "none", float:"right"}}><RiAccountCircleLine /></Link>
-        //     </li>
-        //     </div>
-        //   </ul>
-        // </div>
-
-
-      // <div className="Navbar">
-      //   <nav>
-      //   <ul className='col'>
-      //     <li>
-      //       <Link to="/home" style={{textDecoration:"none"}}><AiOutlineHome className="navicon"/>Home</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/menu" style={{textDecoration:"none"}}><MdOutlineRestaurantMenu className="navicon"/>Menu</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/gallery" style={{textDecoration:"none"}}><BiPhotoAlbum className="navicon"/>Gallery</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/account" className="account" style={{textDecoration:"none"}}><RiAccountCircleline /></Link>
-      //     </li>
-      //   </ul>
-      //   </nav>
-      // </div>
     );
   }
 }
