@@ -1,16 +1,14 @@
 import { Component } from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { GiChefToque } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-import Navbar from "../Navbar/Navbar";
 import "./Landingpage.css";
 
 class Landingpage extends Component {
   render() {
     return (
       <div className="Landingpage">
-        <Navbar />
-
         <div className="Maincontainer container-fluid">
           <section className="mlogo">
             <img
@@ -25,18 +23,16 @@ class Landingpage extends Component {
               <blockquote>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </blockquote>
-              <a href="#Menu">
-                <FaRegArrowAltCircleRight className="menuRedirect" />
-              </a>
+              <Link to="/menu" style={{textDecoration:"none"}}><FaRegArrowAltCircleRight className="menuRedirect"/></Link>
             </p>
 
-            <a href="#Menu" className="img col h-50">
+            <Link to ="/Menu" className="img col h-50">
               <img
                 className="img-fluid"
                 src={require("../../Assets/Images/fishG.png")}
                 alt="Menu Cover"
               />
-            </a>
+            </Link>
           </section>
 
           <section className="row chef align-items-center">
@@ -52,7 +48,7 @@ class Landingpage extends Component {
                 augue. Sed in volutpat nulla, sed consectetur leo. Nullam
                 viverra elit a gravida pharetra. Nullam posuere fermentum enim
                 ac volutpat.
-                <sign>-Mikkel</sign>
+                <div className="sign">-Mikkel</div>
               </p>
             </div>
             <img
@@ -109,7 +105,7 @@ class Landingpage extends Component {
             </Carousel>
             <div className="col align-self-center">
               <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et.</h2>
-              <h7>In vel eleifend nisl, eget.</h7>
+              <h6>In vel eleifend nisl, eget.</h6>
             </div>
           </section>
         </div>

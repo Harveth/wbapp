@@ -1,21 +1,31 @@
-.Navbar{  
-    height: 7vh;
+/* .Navbar{  
+    min-height: 5vh;
+    height: auto;
     width: 100vw;
-    align-content: center;
+    background-color: #121212;
+    padding: none;
+    
 }
+.navbar {
+    margin: -1% -1% 1% -1%;
+  }
 .Navbar li{
     color: white;
     font-size: 35px;
     display:inline-block;
     padding: 10px;
+    text-decoration: none;
+
 }
+
 .Navbar ul{
     list-style-type:none;
-    /* text-align: center; */
+    text-align: center;
     justify-content: center;
-    margin: 0;  
+    padding: 0,0,0,0;
+    margin: none;
 }
-.Navbar ul li:hover{
+.Navbar ul li link:hover{
     color: gold;
 }
 .Navbar ul li:active{
@@ -28,4 +38,21 @@
 
 .account{
     float: right;
+    vertical-align: baseline;
+} */
+.navbar{
+   width: 100vw; 
+}
+.account{
+    font-size: 35px;
+    float: right;
+position: absolute;
+    vertical-align: text-top;
+}
+.navbar li{
+    font-size: 35px;
+    display: inline-block;
+    list-style-type:none;
+    padding: 10px;
+
 }

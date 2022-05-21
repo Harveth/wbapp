@@ -23,7 +23,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App{
+  background-image: url("./Assets/Images/bg.png");
+  position: fixed;
+}
 .App-link {
   color: #61dafb;
 }

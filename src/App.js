@@ -2,7 +2,12 @@ import { Component } from 'react';
 import './App.css';
 import Landingpage from './components/Landingpage/Landingpage';
 import Navbar from './components/Navbar/Navbar';
+import Menu from'./components/Menu/Menu';
+import Gallery from'./components/Gallery/Gallery';
+import Account from'./components/Account/Account';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route , Routes} from 'react-router-dom';
 class App extends Component {
   constructor(){
     super();
@@ -38,7 +43,14 @@ class App extends Component {
   render(){
     return (
         <div>
-        <Landingpage/>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Landingpage/>}/>
+            <Route path='/home' element={<Landingpage/>}/>
+            <Route path='/menu' element={<Menu/>}/>
+            <Route path='/gallery' element={<Gallery/>}/>
+            <Route path='/account' element={<Account/>}/>
+          </Routes>
         </div>
     );
   }
