@@ -9,7 +9,7 @@ import './Navbar.css';
 class Navbar extends Component {
   render() {
     return (
-        <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-transparent'>
           <div className='container-fluid'>
             <div className='navbar'>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
@@ -23,7 +23,7 @@ class Navbar extends Component {
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
             </li>
             </ul>
-            <ul className='navbar-nav ms-2 ms-lg me-4 mb-4'>
+            <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>
             <li className=''>
               <Link to="/account" className="account navbar-nav ms-auto mb-2 mb-lg-0"><RiAccountCircleLine /></Link>
             </li>

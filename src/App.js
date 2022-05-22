@@ -43,14 +43,14 @@ class App extends Component {
   render(){
     return (
         <div>
-          <Navbar/>
-          <Routes>
+            <Routes>
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account/>}/>
           </Routes>
+          <Navbar/>
         </div>
     );
   }

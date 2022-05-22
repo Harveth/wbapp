@@ -43,6 +43,7 @@
 .navbar{
    width: 100vw;
    background-color: transparent;
+   background-image: '../Assets/Images/bg.png';
 }
 .account{
     font-size: 35px;
