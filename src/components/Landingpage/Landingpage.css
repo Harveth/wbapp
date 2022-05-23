@@ -1,23 +1,95 @@
-.Landingpage{
-    background-image:url('../../Assets/Images/bg.png');
-    background-size:cover;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    border: none;
-    z-index: 100;
+.Landingpage {
+  background-image: url("../../Assets/Images/bg.png");
+  position: fixed;
 }
-html, body {
-    margin: 0;
-    padding: 0;
+.mlogo img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 60%;
 }
-.intro{
-    /* border-width: 5px;
-    border-style: outset;
-    border-color: #FFD700;
-    border-radius: 40px 0px 40px 0px; */
-    outline-width: 5px;
-    outline-style: outset;
-    outline-color: #FFD700;
-    outline-offset: 6px;
-} 
+.menu {
+  background-color: #121212;
+}
+.menu p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+  color: goldenrod;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 15px 50px;
+  border-style: double;
+  margin-left: 10px;
+}
+.sign{
+  font-family:'Snell Roundhand', cursive;
+  color: silver;
+}
+.menu a,
+a:link,
+a:visited {
+  color: goldenrod;
+}
+.menu a:hover {
+  color: gold;
+}
+
+.Maincontainer {
+  overflow-y: scroll;
+  height: 100vh;
+}
+.Maincontainer section {
+  min-height: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+}
+.chef p {
+  border-radius: 15px 50px;
+  border-style: double;
+  border-color: goldenrod;
+  font-size: xx-large;
+  color: white;
+}
+.chef sign {
+  font-family: "Brush Script MT", cursive;
+  font-size: larger;
+}
+.chef icon{
+  vertical-align: text-bottom ;
+  color: gold;
+  font-size: 30px;
+}
+.chef img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 60%;
+}
+.chef h2 {
+  font-size: x-large;
+  font-family: fantasy;
+  margin: none;
+  padding: none;
+}
+.chefW {
+  margin-left: 10px;
+}
+.gallery {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #121212;
+}
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+blockquote {
+  quotes: "“" "”" "‘" "’";
+}
+
+body {
+  max-width: 20em;
+  font: 1.8rem/1.4 Georgia, serif;
+}
