@@ -109,19 +109,6 @@ class Landingpage extends Component {
             </div>
           </section>
         </div>
-        <footer className="bg-dark text-center text-white text-muted">
-            <section className="row">
-              <div className="col">
-                  Contacts
-              </div>
-              <div className="col">
-                   Working hours
-              </div>
-              <div className="col">
-                  About us
-              </div>
-            </section>
-          </footer>
       </div>
     );
   }
