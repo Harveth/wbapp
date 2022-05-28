@@ -45,7 +45,6 @@ class App extends Component {
     return (
         <div>
           <Navbar/>
-
           <Routes>
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
@@ -53,8 +52,9 @@ class App extends Component {
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account/>}/>
           </Routes>
-
+          <>
           <Footer/>
+          </>
         </div>
     );
   }
