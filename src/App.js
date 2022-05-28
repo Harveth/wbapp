@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Menu from'./components/Menu/Menu';
 import Gallery from'./components/Gallery/Gallery';
 import Account from'./components/Account/Account';
+import Footer from './components/Footer/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes} from 'react-router-dom';
@@ -43,14 +44,17 @@ class App extends Component {
   render(){
     return (
         <div>
-            <Routes>
+          <Navbar/>
+
+          <Routes>
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account/>}/>
           </Routes>
-          <Navbar/>
+
+          <Footer/>
         </div>
     );
   }
