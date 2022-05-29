@@ -5,9 +5,9 @@ import './Footer.css';
 class Footer extends Component {
   render() {
     return (
-      
+      <div className="footerC">
         <footer className="bg-dark text-center text-white mt-auto">
-          <div className=" p-4">
+          <div >
             <section className="mb-4">
 
               <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
@@ -22,6 +22,7 @@ class Footer extends Component {
             <a href="https://miuegypt.edu.eg/">MIU</a>
           </div>
         </footer>
+        </div>
     );
   }
 }
