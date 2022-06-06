@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './Signin.css'
+import "./Signin.css";
 import axios from 'axios';
 
 const SERVER = 'http://localhost:6969';
@@ -61,16 +61,19 @@ class Signin extends Component{
     on
     render(){
         return(
-            <div className='SignIn-outerouter'>
-                <div className="Signin-outer">
-                <h1 className="SignIn-Title">Sign In</h1>
+            <body className="bgrnd">
+            <div className="Signup-Inputs">
+                <div className="container">
+                <h1>Sign In</h1>
                     <div className="SignIn-Inputs">
-                        <input className="form-username" placeholder="username" onChange={this.onUsernameChange}/><br/>
-                        <input className="form-password" placeholder="password" onChange={this.onPasswordChange}/><br/>
+                        <input className="input-box" placeholder="Username" onChange={this.onUsernameChange}/><br/>
+                        <input type="password" className="input-box" placeholder="Password" onChange={this.onPasswordChange}/><br/>
+                        <p className="smol">Don't have an account? <a href="/Signup">Sign Up</a></p>
                     </div>
-                    <button className="Signin-btn" onClick={this.phpTest}> Sign In</button>
+                    <button className="signup-btn" onClick={this.phpTest}> Sign In</button>
                 </div>
             </div>
+            </body>
         );
     }
 }
