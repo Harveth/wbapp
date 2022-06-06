@@ -89,6 +89,9 @@ class Signup extends Component {
             placeholder="Phone number"
             onChange={this.onPhoneNumberChange}
           ></input>
+          <input type="file" id="actual-btn" hidden/>
+          <label for="actual-btn" className="lbl-btn">Choose File</label>
+          <span id="file-chosen" className="span-txt">Upload your national ID</span>
           <br />
           <p className="smol">
             Already have an account? <a href="/Signin">Sign in</a>
