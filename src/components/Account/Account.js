@@ -3,10 +3,20 @@ import './Account.css';
 
 
 class Account extends Component {
+  constructor(props) {
+    super(props);
+  }
+
     render() {
+      if(this.props.isActive)
+        return (
+          <div>
+              <h1>Account Status : Activated</h1>
+          </div>
+        );
       return (
           <div>
-              Account here aw 7aga idk
+              <h1>Account Status : Pending</h1>
           </div>
         );
     }

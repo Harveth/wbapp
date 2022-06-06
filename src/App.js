@@ -20,7 +20,8 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: ''
+      type: '',
+      isAccountActive: false
 
     }
   }
@@ -41,6 +42,7 @@ class App extends Component {
   getDataFromSignUp = (usernam) =>{
     console.log(usernam);
     this.setState({username: usernam}, () => { console.log(this.state)});
+    this.setState({isAccountActive: false});
     //console.log(this.state);
   }
 
@@ -50,12 +52,11 @@ class App extends Component {
           <Navbar/>
           <div id='main-content'>
           <Routes>
-
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
-            <Route path='/account' element={<Account/>}/>
+            <Route path='/account' element={<Account isActive={this.state.isAccountActive}/>}/>
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
           </Routes>
