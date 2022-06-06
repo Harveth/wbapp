@@ -1,47 +1,69 @@
-.Landingpage {
-  background-image: url("../../Assets/Images/bg.png");
-  position: fixed;
+.LandingPage{
+  min-height: 100vh;
+  background-image: url("../../Assets/Images/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-.mlogo img {
+.LandingPage section{
+  min-height: 100vh;
+
+}
+
+.container2{
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  border-radius: 25px;
+  align-self: center;
+  min-height: 100vh;
+  padding: 4rem;
+}
+.logo img{
   margin-left: auto;
   margin-right: auto;
   display: block;
   width: 60%;
 }
-.menu {
-  background-color: #121212;
+.menu h3{
+  color: gold;
 }
 .menu p {
   font-family: "Times New Roman", Times, serif;
-  font-size: xx-large;
+  font-size: 3vw;
   color: goldenrod;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, .7);
   border-radius: 15px 50px;
   border-style: double;
-  margin-left: 10px;
-}
-.sign{
-  font-family:'Snell Roundhand', cursive;
-  color: silver;
+  min-height: 40vh;
+  padding-left: 2rem;
 }
 .menu a,
 a:link,
 a:visited {
   color: goldenrod;
 }
-.menu a:hover {
+.menu a:hover, account:hover {
   color: gold;
 }
-
-.Maincontainer {
-  overflow-y: scroll;
-  height: 100vh;
-}
-.Maincontainer section {
-  min-height: 100%;
-  height: auto;
+.third{
   color: white;
-  text-align: center;
+}
+.chef{
+  height :50%;
+}
+.review{
+  height :50%;
+
+}
+.awards h1{
+  color: whitesmoke;
+}
+
+.awards p{
+  border-radius: 20px 50px;
+  background-color: rgba(0, 0, 0, .5);
+  margin: 10px;
+  padding: 20px;
 }
 .chef p {
   border-radius: 15px 50px;
@@ -50,34 +72,19 @@ a:visited {
   font-size: xx-large;
   color: white;
 }
-.chef sign {
+.sign {
   font-family: "Brush Script MT", cursive;
   font-size: larger;
+}.chef {
+  margin:0;
+  padding: 0;
 }
-.chef icon{
-  vertical-align: text-bottom ;
-  color: gold;
-  font-size: 30px;
+.chef p{ 
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgba(0, 0, 0, .5);
 }
-.chef img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 60%;
-}
-.chef h2 {
-  font-size: x-large;
-  font-family: fantasy;
-  margin: none;
-  padding: none;
-}
-.chefW {
-  margin-left: 10px;
-}
-.gallery {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #121212;
+.review p{
+  color: white;
 }
 blockquote::before {
   content: open-quote;
@@ -87,9 +94,5 @@ blockquote::after {
 }
 blockquote {
   quotes: "“" "”" "‘" "’";
-}
-
-body {
-  max-width: 20em;
-  font: 1.8rem/1.4 Georgia, serif;
+  color:white;
 }

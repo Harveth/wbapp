@@ -1,4 +1,10 @@
 # Link to the server
 
-https://github.com/amromnia/ServerPHP
+Server repo [here](https://github.com/amromnia/ServerPHP)
+
+---
+
+## Link to Trello
+
+Trello [Link](https://trello.com/b/kfmG53K1/grnd-restaurant)
 

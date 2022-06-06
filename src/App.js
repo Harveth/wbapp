@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Menu from'./components/Menu/Menu';
 import Gallery from'./components/Gallery/Gallery';
 import Account from'./components/Account/Account';
+import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin'
 import Signup from './components/Signup/Signup'
 
@@ -44,8 +45,11 @@ class App extends Component {
 
   render(){
     return (
-        <div>
-            <Routes>
+        <div id='container'>
+          <Navbar/>
+          <div id='main-content'>
+          <Routes>
+
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
@@ -54,7 +58,8 @@ class App extends Component {
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup/>}/>
           </Routes>
-          <Navbar/>
+          </div>
+          <Footer/>
         </div>
     );
   }

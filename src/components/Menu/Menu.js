@@ -5,9 +5,9 @@ import './Menu.css';
 class Menu extends Component {
     render() {
       return (
-          <div>
-              Menu here aw 7aga idk
-          </div>
+          <div> 
+              menu
+        </div>
         );
     }
   }
