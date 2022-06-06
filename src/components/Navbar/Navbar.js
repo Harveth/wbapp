@@ -45,7 +45,7 @@ class Navbar extends Component {
               <Link to="/menu" style={{ textDecoration: "none" }}><MdOutlineRestaurantMenu className="navicon" />Menu</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/signin" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
+              <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
             </li>
             </ul>
             <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>

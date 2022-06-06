@@ -5,7 +5,7 @@ import './Menu.css';
 class Menu extends Component {
     render() {
       return (
-          <div> 
+        <div> 
               menu
         </div>
         );

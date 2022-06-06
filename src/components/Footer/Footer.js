@@ -14,7 +14,7 @@ class Footer extends Component {
 
               <a href="https://Facebook.com/GRND" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1"
               ><RiFacebookFill/></a>
-              <a a href="https://Twitter.com/GRND" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1" role="button"
+              <a a href="https://twitter.com/GrndRestaurant" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1" role="button"
               ><RiTwitterFill/></a>
               
             </section>

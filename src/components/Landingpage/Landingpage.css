@@ -3,11 +3,10 @@
   background-image: url("../../Assets/Images/bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  overflow-x: hidden;
 }
 .LandingPage section{
   min-height: 100vh;
-
 }
 
 .container2{
@@ -37,6 +36,7 @@
   min-height: 40vh;
   padding-left: 2rem;
 }
+
 .menu a,
 a:link,
 a:visited {
@@ -47,6 +47,9 @@ a:visited {
 }
 .third{
   color: white;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 .chef{
   height :50%;
