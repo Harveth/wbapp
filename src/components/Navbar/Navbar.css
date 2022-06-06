@@ -1,65 +1,24 @@
-/* .Navbar{
-    min-height: 5vh;
-    height: auto;
-    width: 100vw;
-    background-color: #121212;
-    padding: none;
-
-}
-.navbar {
-    margin: -1% -1% 1% -1%;
-  }
-.Navbar li{
-    color: white;
-    font-size: 35px;
-    display:inline-block;
-    padding: 10px;
-    text-decoration: none;
-
-}
-
-.Navbar ul{
-    list-style-type:none;
-    text-align: center;
-    justify-content: center;
-    padding: 0,0,0,0;
-    margin: none;
-}
-.Navbar ul li link:hover{
-    color: gold;
-}
-.Navbar ul li:active{
-    color: gold;
-}
-.navicon{
-    margin-right: 5px;
-    vertical-align:baseline;
-}
-
-.account{
-    float: right;
-    vertical-align: baseline;
-} */
 .navbar{
-    height: 10vh;
+   height: 10vh;
    width: 100vw;
    background-color: transparent;
    position: fixed;
    top: 0;
    background-image: linear-gradient(black, #121212);
     border-color: none;
-   /* background-image: '../Assets/Images/bg.png'; */
 }
 .account{
-    font-size: 35px;
+    font-size: 30px;
     float: right;
     position: absolute;
     vertical-align: text-top;
 }
 .navbar li{
-    font-size: 35px;
+    font-size: 30px;
     display: inline-block;
     list-style-type:none;
     padding: 10px;
-
+}
+a:link, a:visited{ 
+color: goldenrod;
 }
