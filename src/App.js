@@ -10,6 +10,7 @@ import Account from'./components/Account/Account';
 import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin'
 import Signup from './components/Signup/Signup'
+import Items from './components/Items/Items'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes} from 'react-router-dom';
@@ -78,6 +79,7 @@ class App extends Component {
             <Route path='/account' element={<Account isActive={this.state.isAccountActive}/>}/>
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
+            <Route path='/items' element={<Items/>}/>
           </Routes>
           </div>
           <Footer/>

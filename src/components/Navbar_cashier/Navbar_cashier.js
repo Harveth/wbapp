@@ -48,7 +48,7 @@ class Navbar extends Component {
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Items</Link>
+              <Link to="/items" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Items</Link>
             </li>
             <li className='nav-item'>
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Orders</Link>
