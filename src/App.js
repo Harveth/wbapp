@@ -44,9 +44,11 @@ class App extends Component {
 
   render(){
     return (
-        <div>
+        <div id='container'>
           <Navbar/>
+          <div id='main-content'>
           <Routes>
+
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
@@ -54,9 +56,8 @@ class App extends Component {
             <Route path='/account' element={<Account/>}/>
             <Route path='/signin' element={<Signin setUsername={this.setUsername}/>}/>
           </Routes>
-          <>
+          </div>
           <Footer/>
-          </>
         </div>
     );
   }

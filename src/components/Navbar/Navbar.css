@@ -41,6 +41,7 @@
     vertical-align: baseline;
 } */
 .navbar{
+    height: 10vh;
    width: 100vw;
    background-color: transparent;
    position: fixed;
