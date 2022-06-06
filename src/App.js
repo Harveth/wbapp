@@ -2,6 +2,8 @@ import { Component } from 'react';
 import './App.css';
 import Landingpage from './components/Landingpage/Landingpage';
 import Navbar from './components/Navbar/Navbar';
+import Navbar_cashier from './components/Navbar_cashier/Navbar_cashier'
+import Navbar_qualitycontrol from './components/Navbar_qualitycontrol/Navbar_qualitycontrol'
 import Menu from'./components/Menu/Menu';
 import Gallery from'./components/Gallery/Gallery';
 import Account from'./components/Account/Account';
@@ -20,7 +22,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: '',
+      type: 'cashier',
       isAccountActive: false
 
     }
@@ -46,10 +48,27 @@ class App extends Component {
     //console.log(this.state);
   }
 
+  changeToCashier = () =>{
+    this.setState({type: 'cashier'});
+  }
+
   render(){
+    let {type} = this.state;
+    const renderNav = () =>{
+      if(type == 'client'){
+        return <Navbar/>
+      }else if(type == 'cashier'){
+        return <Navbar_cashier/>
+      }else{
+        return <Navbar_qualitycontrol/>
+      }
+    }
+
     return (
         <div id='container'>
-          <Navbar/>
+          {renderNav()}
+          {//<Navbar/> 
+          }
           <div id='main-content'>
           <Routes>
             <Route path='/' element={<Landingpage/>}/>
