@@ -61,6 +61,7 @@ class Signup extends Component {
       if(this.state.signUpSuccessful)
         return <Navigate to="/home"/>
     return (
+      <body className="bgrnd1">
         <div className="Signup-Inputs">
         <div className="container">
           <h1>Sign Up</h1>
@@ -90,7 +91,7 @@ class Signup extends Component {
           ></input>
           <br />
           <p className="smol">
-            Already have an account? <a href="#">Sign in</a>
+            Already have an account? <a href="/Signin">Sign in</a>
           </p>
           <p>
             {" "}
@@ -103,6 +104,7 @@ class Signup extends Component {
           </button>
         </div>
       </div>
+      </body>
     );
   }
 }

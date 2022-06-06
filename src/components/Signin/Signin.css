@@ -1,32 +1,52 @@
-
-.Signin-outerouter{
-    margin: 0 auto;
-}
-
-.Signin-outer{
-    display: inline-block;
-    background: linear-gradient(90deg, rgba(6,6,6,1) 0%, rgba(153,153,153,1) 100%);
-    width: 20rem;
-    height: 23rem;
-    align-items: center;
-    border-radius: 15px;
-}
-
-.SignIn-Title{
-    font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
-}
-
-.SignIn-Inputs{
-    padding: 20px;
-    margin: 20px;
-}
-
-.form-username{
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-.form-password{
-    margin-bottom: 30px;
+.container{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-y: hidden;
     
+}
+.bgrnd{
+    background-image: url(../Signup/tst.png);
+    background-size: 100% 100%;
+    min-height: 72.5vh;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+    background-attachment: fixed;
+}
+.Signup-Inputs{
+    width: 350px;
+     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+     background: rgb(255, 255, 255);
+     padding:21px;
+     margin: 8% auto 0;
+     text-align: center;
+     border-radius: 20px;
+     
+}
+.Signup-Inputs h1{
+    margin-top:5px;
+    margin-bottom: 30px;
+}
+.smol{
+    margin:0px;
+    font-size: 13px;
+}
+.input-box{
+    border-radius: 20px;
+    padding: 9px;
+    margin: 5px 0;
+    width: 90%;
+    border: 1.5px solid #999;
+    outline: none;
+}
+.signup-btn{
+    background-color: rgb(0, 128, 233);;
+    color: rgb(255, 255, 255);
+    width:70%;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 10px 0;
+    border:none;
+    outline: none;
+    cursor:pointer;
 }
