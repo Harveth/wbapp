@@ -7,18 +7,16 @@
 }
 .LandingPage section{
   min-height: 100vh;
- 
+
 }
 
 .container2{
-  background-color: rgba(0,0,0,.9);
+  background-color: rgba(0,0,0,.5);
   color: #fff;
   border-radius: 25px;
   align-self: center;
   min-height: 100vh;
-}
-.menu{
-  color: white;
+  padding: 4rem;
 }
 .logo img{
   margin-left: auto;
@@ -33,7 +31,7 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 3vw;
   color: goldenrod;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .7);
   border-radius: 15px 50px;
   border-style: double;
   min-height: 40vh;
@@ -85,6 +83,9 @@ a:visited {
   font-family: "Times New Roman", Times, serif;
   background-color: rgba(0, 0, 0, .5);
 }
+.review p{
+  color: white;
+}
 blockquote::before {
   content: open-quote;
 }
@@ -93,4 +94,5 @@ blockquote::after {
 }
 blockquote {
   quotes: "“" "”" "‘" "’";
+  color:white;
 }
