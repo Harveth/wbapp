@@ -5,3 +5,15 @@
     bottom: 0;
     width: 100vw;
 }
+.info h6{
+    float: left;
+    padding-left: 1rem;
+    color: gold;
+}
+.info p{
+    float: left;
+    text: muted;
+}
+.vr{
+    width: 1px;
+}
