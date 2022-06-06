@@ -13,15 +13,15 @@ class Signin extends Component{
     }
 
     phpTest = async () => {
-        await axios.post(`${SERVER}/api/login.php`, {
+        await axios.post(`${SERVER}/ServerPHP/login.php`, {
             email: this.state.signInUsername,
             password: this.state.signInPassword
         }).then(res => {
-            if(res.data == 'yes'){
-                console.log('correct sign in!');
+            if(res.data == 'no'){
+                console.log('error logging in');
             }
             else {
-                console.log('incorrect sign in!');
+                console.log(res.data);
             }
         })
     }
@@ -37,7 +37,7 @@ class Signin extends Component{
         })
         .then(response => response.json())
         .then(data => {
-            if(data === 'yes')
+            if(data === 'no')
                 console.log("you logged in");
             else if(data === 'no')
                 console.log("you failed to log in");
