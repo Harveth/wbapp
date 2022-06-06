@@ -29,7 +29,7 @@ a:link,
 a:visited {
   color: goldenrod;
 }
-.menu a:hover {
+.menu a:hover, account:hover {
   color: gold;
 }
 

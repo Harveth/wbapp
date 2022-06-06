@@ -49,16 +49,46 @@
     border-color: none;
    /* background-image: '../Assets/Images/bg.png'; */
 }
-.account{
-    font-size: 35px;
-    float: right;
-    position: absolute;
-    vertical-align: text-top;
-}
+
 .navbar li{
     font-size: 35px;
     display: inline-block;
     list-style-type:none;
     padding: 10px;
 
+}
+.menu a,
+a:link,
+a:visited {
+  color: goldenrod;
+}
+.menu a:hover, account:hover {
+  color: gold;
+}
+
+.account{
+    color: goldenrod;
+}
+.account:hover{
+    color: gold;
+}
+a.dropdown-toggle.nav-link::after{
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+    background-color: #121212;
+}
+.dropdown-menu.show :hover, .dropdown-menu.show :visited{
+    background-color: #121212;
+}
+.dropdown-item{
+    font-size: 20px;
+}
+a.dropdown-item:hover{
+    color: gold;
+}
+a.dropdown-item:focus{
+    color: goldenrod;
 }
