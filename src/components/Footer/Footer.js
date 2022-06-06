@@ -12,7 +12,7 @@ class Footer extends Component {
           <div >
             <section className="mb-4">
 
-              <a href="https://Facebook.com/GRND" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1"
+              <a href="https://www.facebook.com/GRND-106369172103339" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1"
               ><RiFacebookFill/></a>
               <a a href="https://twitter.com/GrndRestaurant" target="_blank" rel="noreferrer" className="btn btn-outline-light btn-floating m-1" role="button"
               ><RiTwitterFill/></a>
