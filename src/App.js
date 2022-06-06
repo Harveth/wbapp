@@ -15,17 +15,13 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      name: "",
-      password: "",
       rout: 'signin',
       isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        username: '',
-        password: '',
-        joined: new Date()
-      }
+      id: '',
+      username: '',
+      email: '',
+      type: ''
+
     }
   }
 
@@ -42,6 +38,11 @@ class App extends Component {
     this.setState({user});
   }
 
+  getDataFromSignUp = (usernam) =>{
+    console.log(usernam);
+    this.setState({username: usernam}, () => { console.log(this.state)});
+    //console.log(this.state);
+  }
 
   render(){
     return (
@@ -56,7 +57,7 @@ class App extends Component {
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account/>}/>
             <Route path='/signin' element={<Signin/>}/>
-            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
           </Routes>
           </div>
           <Footer/>

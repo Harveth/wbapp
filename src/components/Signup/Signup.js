@@ -1,7 +1,9 @@
 import { Component } from "react";
 import "./Signup.css";
+import { Navigate } from 'react-router-dom'
 import axios from "axios";
 const SERVER = "http://localhost:6969";
+
 
 class Signup extends Component {
   constructor(props) {
@@ -11,8 +13,11 @@ class Signup extends Component {
       signUpPassword: "",
       signUpEmail: "",
       signUpPhoneNumber: "",
+      signUpSuccessful: false
     };
   }
+
+  
 
   su = async () => {
     await axios
@@ -27,6 +32,9 @@ class Signup extends Component {
           console.log("error creating user");
         } else {
           console.log(res.data);
+          console.log(res.data.username);
+          this.props.sendData(res.data.username);
+          this.setState({signUpSuccessful : true});
         }
       });
   };
@@ -50,8 +58,10 @@ class Signup extends Component {
   };
 
   render() {
+      if(this.state.signUpSuccessful)
+        return <Navigate to="/home"/>
     return (
-      <div className="Signup-Inputs">
+        <div className="Signup-Inputs">
         <div className="container">
           <h1>Sign Up</h1>
           <input
