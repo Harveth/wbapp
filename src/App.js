@@ -6,6 +6,7 @@ import Menu from'./components/Menu/Menu';
 import Gallery from'./components/Gallery/Gallery';
 import Account from'./components/Account/Account';
 import Footer from './components/Footer/Footer';
+import Signin from './components/Signin/Signin';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes} from 'react-router-dom';
@@ -53,7 +54,7 @@ class App extends Component {
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account/>}/>
-
+            <Route path='/signin' element={<Signin setUsername={this.setUsername}/>}/>
           </Routes>
           </div>
           <Footer/>
