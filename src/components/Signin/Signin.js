@@ -8,7 +8,7 @@ class Signin extends Component{
         super(props);
         this.state = {
             signInUsername: '',
-            signInPassword: ''
+            signInPassword: '',
         }
     }
 
@@ -63,7 +63,7 @@ class Signin extends Component{
         return(
             <body className="bgrnd">
             <div className="Signup-Inputs">
-                <div className="container">
+                <div className="containerMini">
                 <h1>Sign In</h1>
                     <div className="SignIn-Inputs">
                         <input className="input-box" placeholder="Username" onChange={this.onUsernameChange}/><br/>

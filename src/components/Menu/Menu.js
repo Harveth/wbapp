@@ -60,7 +60,7 @@ class Menu extends Component {
       const { cookies } = this.props;
       console.log(cookies.get("cart"));
       return (
-        <div>
+        <div className="container">
               <button onClick={() => this.addToCart(2)}>Add Item Number 2 To Cart :D</button>
               <br></br>
               <br></br>

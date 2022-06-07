@@ -38,7 +38,34 @@ class Items extends Component {
             if (res.data == "error") {
                 console.log("error");
               } else {
+                console.log("loggin response");
                 console.log(res.data);
+                // const item = {
+                //   id: res.data.id,
+                //   name: res.data.name,
+                //   type: res.data.type,
+                //   price: res.data.price
+
+                // }
+                // console.log("loggin item");
+                // console.log(item);
+                // this.setState(prevState => ({
+                //   items : [...prevState.items, item]
+                // }))
+                // console.log("loggin state");
+                // console.log(this.state);
+                for(let i = 0; i < res.data.length; i++){
+                  const item = {
+                    id: res.data[i].id,
+                    name: res.data[i].name,
+                    type: res.data[i].type,
+                    price: res.data[i].price
+                  }
+                    this.setState(prevState => ({
+                    items : [...prevState.items, item]
+                }), () =>{ console.log(this.state);})
+               
+                }
                 
               }
           });
