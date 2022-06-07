@@ -11,10 +11,11 @@ import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin'
 import Signup from './components/Signup/Signup'
 import Items from './components/Items/Items'
+import Not_Found from './components/Not found/Not_Found';
 import Cart from './components/Cart/Cart'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route , Routes} from 'react-router-dom';
+import { Route , Routes, Redirect} from 'react-router-dom';
 class App extends Component {
   constructor(){
     super();
@@ -82,6 +83,7 @@ class App extends Component {
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
             <Route path='/items' element={<Items/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path ='*'component={<Not_Found/>} />
           </Routes>
           </div>
           <Footer/>
