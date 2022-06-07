@@ -63,7 +63,7 @@ class Signup extends Component {
     return (
       <body className="bgrnd1">
         <div className="Signup-Inputs">
-        <div className="container">
+        <div className="containerMini">
           <h1>Sign Up</h1>
           <input
             className="input-box"
