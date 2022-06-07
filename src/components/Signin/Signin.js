@@ -8,7 +8,7 @@ class Signin extends Component{
         super(props);
         this.state = {
             signInUsername: '',
-            signInPassword: ''
+            signInPassword: '',
         }
     }
 
