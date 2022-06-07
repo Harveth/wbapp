@@ -12,7 +12,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 85vh;
+    min-height: 95vh;
 }
 .Signup-Inputs{
     width: 350px;
@@ -39,6 +39,19 @@
     width: 90%;
     border: 1.5px solid #999;
     outline: none;
+}
+.lbl-btn{
+  background-color: rgb(0, 109, 198);
+  color: white;
+  padding: 0.2rem;
+  font-family: sans-serif;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;  
+  margin-right: 10rem;
+}
+.span-txt{
+    margin-left: -9.5rem;
 }
 .signup-btn{
     background-color: rgb(0, 128, 233);
