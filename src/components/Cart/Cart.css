@@ -1,0 +1,49 @@
+.cart-pg{
+    margin:0px auto;
+}
+.cart-table{
+    width:100%;
+    border-collapse: collapse;
+}
+.smol-container{
+    min-height: 70vh;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cart-info img{
+    width:80px;
+    height:80px;
+    margin-right: 10px;
+}
+
+.cart-head{
+    text-align: left;
+    padding: 5px;
+    color:white;
+    background:rgb(68, 174, 255);
+    font-weight: normal;
+}
+.cart-tbdata{
+    padding:15px 10px;
+}
+.cart-tbdata a{
+    color: red;
+    font-size: 12px;
+    text-decoration: none;
+    
+}
+.cart-price{
+     display: flex;
+     justify-content: flex-end;
+}
+.cart-price table{
+    border-top: 4px red;
+    width:100%;
+    max-width: 400px;
+}
+.cart-tbdata td:last-child{
+    text-align: right;
+}
