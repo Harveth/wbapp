@@ -9,7 +9,7 @@ import React from 'react';
 import './Navbar.css';
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-  <RiAccountCircleLine className="account navbar-nav ms-auto mb-2 mb-lg-0 dropdown-toggle"/>
+  <RiAccountCircleLine className="account navbar-nav ms-auto mb-2 mb-lg-6 dropdown-toggle"/>
 ));
 
 class Navbar extends Component {
@@ -31,13 +31,14 @@ class Navbar extends Component {
                 <NavDropdown alignRight title={<RiAccountCircleLine className="account"/>} className="">
                   <Link to='/home' className="dropdown-item">Home</Link>
                   <Link to='/account' className="dropdown-item">Account</Link>
+                  <Link to='/cart' className="dropdown-item">Cart</Link>
                 </NavDropdown>;
     }
     return (
         <nav className='navbar navbar-expand-lg navbar-dark bg-transparent'>
           <div className='container-fluid'>
             <div className='navbar'>
-            <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+            <ul className='navbar-nav me-auto mb-3 mb-lg-5'>
             <li className='nav-item'>
               <Link to="/home" style={{ textDecoration: "none" }}><AiOutlineHome className="navicon" />Home</Link>
             </li>

@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin'
 import Signup from './components/Signup/Signup'
 import Items from './components/Items/Items'
+import Cart from './components/Cart/Cart'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes} from 'react-router-dom';
@@ -23,7 +24,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: 'cashier',
+      type: 'client',
       isAccountActive: false
 
     }
@@ -68,7 +69,7 @@ class App extends Component {
     return (
         <div id='container'>
           {renderNav()}
-          {//<Navbar/> 
+          {//<Navbar/>
           }
           <div id='main-content'>
           <Routes>
@@ -80,6 +81,7 @@ class App extends Component {
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
             <Route path='/items' element={<Items/>}/>
+            <Route path='/cart' element={<Cart/>}/>
           </Routes>
           </div>
           <Footer/>
