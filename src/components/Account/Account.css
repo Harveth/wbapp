@@ -1,0 +1,9 @@
+.main-container{
+    min-height: 100vh;
+    background-image: url(../Account/background.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.info h1{
+    font-size: 4vw;
+}
