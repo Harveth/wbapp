@@ -1,5 +1,7 @@
 import { Component } from "react";
 import Item_card from "./Item_card";
+import axios from "axios";
+const SERVER = "http://localhost:6969";
 
 class item{
     constructor(id, name, description, rating){
@@ -21,8 +23,28 @@ class Items extends Component {
                 description: '',
                 rating: ''
             }
-        ]
+        ],
+        searchString: ''
       };
+    }
+
+    loadItems = async () => {
+        await axios
+          .post(`${SERVER}/ServerPHP/items.php`, {
+              req: "requestforitems"
+          })
+          .then((res) => {
+            if (res.data == "error") {
+                console.log("error");
+              } else {
+                console.log(res.data);
+                
+              }
+          });
+      };
+
+    componentDidMount(){
+        this.loadItems();
     }
   
   
