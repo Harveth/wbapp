@@ -21,7 +21,7 @@ class Cart extends Component {
         let currCart = this.getFoodFromCart();
       return (
 
-        <div>
+        <div className="container">
             <table>
                 <thead>
                     <tr>
