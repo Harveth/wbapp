@@ -5,6 +5,7 @@ import { BiPhotoAlbum } from "react-icons/bi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import {BiCart} from "react-icons/bi";
 import React from 'react';
 import './Navbar.css';
 
@@ -50,6 +51,10 @@ class Navbar extends Component {
             </li>
             </ul>
             <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>
+            <li>
+            <Link to="/Cart"  style={{ textDecoration: "none",paddingTop:'80' }}><BiCart className="navicon" /></Link>
+            </li>
+          
             <li className=''>
               {/* <Link to="/signin" className="account navbar-nav ms-auto mb-2 mb-lg-0"><RiAccountCircleLine className="account navbar-nav ms-auto mb-2 mb-lg-0"/></Link> */}
               {/* <Dropdown>
