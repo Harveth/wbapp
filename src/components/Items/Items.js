@@ -59,35 +59,51 @@ class Items extends Component {
                     id: res.data[i].id,
                     name: res.data[i].name,
                     type: res.data[i].type,
-                    price: res.data[i].price
+                    price: res.data[i].price,
+                    description: res.data[i].description
                   }
                     this.setState(prevState => ({
                     items : [...prevState.items, item]
                 }), () =>{ console.log(this.state);})
                
                 }
-                
               }
           });
       };
 
     componentDidMount(){
         this.loadItems();
+        
     }
+    
   
   
     render() {
+
+          console.log("displayin items");
+          console.log(this.state.items.length);
+          let rows = [];
+          for(let i = 0; i < this.state.items.length; i++){
+            rows.push(<Item_card className="itm-child" description={this.state.items[i].description}/>);
+          }
+          //return rows;
+          //this.state.items.map((item, i) =>{<Item_card className="itm-child" description={this.state.items[i].description}/>})
+
+
         const Testurl = "https://www.seriouseats.com/thmb/OBckE8o3ypWrULAwlkb11RvKD7w=/1000x1000/smart/filters:no_upscale()/20210714-potato-starch-fried-chicken-vicky-wasik-seriouseats-20-17e193a6bf274bba9091810a0b18ef89.jpg";
         return (
         <div className="container">
                 <h1> Items: </h1>
                 <input type="text" placeholder="Search Items"/>
                 <div className="item-container">
+                  {/*<Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
+                */}
+                {rows}
+    
                 </div>
         </div>
           );
