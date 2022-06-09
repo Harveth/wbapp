@@ -17,7 +17,6 @@ class Signup extends Component {
     };
   }
 
-  
 
   su = async () => {
     await axios
