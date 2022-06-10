@@ -75,6 +75,12 @@ class Items extends Component {
         this.loadItems();
         
     }
+
+    onSearchChange = (event) =>{
+      //console.log(event.target.value);
+      this.setState({searchString: event.target.value});
+      //console.log(this.state);
+    }
     
   
   
@@ -83,8 +89,10 @@ class Items extends Component {
           console.log("displayin items");
           console.log(this.state.items.length);
           let rows = [];
-          for(let i = 0; i < this.state.items.length; i++){
-            rows.push(<Item_card className="itm-child" description={this.state.items[i].description}/>);
+          for(let i = 1; i < this.state.items.length; i++){
+            if(this.state.items[i].name.toLowerCase().includes(this.state.searchString.toLowerCase())){
+              rows.push(<Item_card className="itm-child" foodName={this.state.items[i].name} price={this.state.items[i].price} description={this.state.items[i].description}/>);
+            }
           }
           //return rows;
           //this.state.items.map((item, i) =>{<Item_card className="itm-child" description={this.state.items[i].description}/>})
@@ -94,7 +102,7 @@ class Items extends Component {
         return (
         <div className="container">
                 <h1> Items: </h1>
-                <input type="text" placeholder="Search Items"/>
+                <input type="text" placeholder="Search Items" onChange={this.onSearchChange}/>
                 <div className="item-container">
                   {/*<Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>

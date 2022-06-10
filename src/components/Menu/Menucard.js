@@ -6,7 +6,8 @@ const Menucard = (props) =>{
         <div className="box-container">
           <div className="box" style={{ backgroundColor: 'rgb(0, 0, 0,0.7)' }}>
             <div className="image">
-              <img style={{ maxWidth: '100%' }} src={require("../../Assets/Images/Appetizers/ChickenDynamite.jpg")}></img>
+              {//<img style={{ maxWidth: '100%' }} src={require("../../Assets/Images/Appetizers/ChickenDynamite.jpg")}></img>
+              }
             </div>
             <div className="content">
               <h3>Name</h3>
