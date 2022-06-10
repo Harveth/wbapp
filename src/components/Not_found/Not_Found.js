@@ -6,8 +6,9 @@ import './Not_Found.css';
 class Not_Found extends Component {
   render() {
     return (
-      <div className='main-container404'>
+      <div className='row alignitems-center main-container404'>
         <h1>404 - Not Found!</h1>
+        <h4>The page you reqeusted does not exists or has been moved permenantly</h4>
       </div>
     );
   }

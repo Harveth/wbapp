@@ -64,7 +64,7 @@ class Landingpage extends Component {
             <h2><RiMedalFill style={{ color: "silver"}}/> James Beard Foundation Award</h2>
             <br/>
             <br/>
-            <h2><AiOutlineUnorderedList style={{ color: "blue"}}/> The World's 50 Best Restaurants</h2>
+            <h2><AiOutlineUnorderedList style={{ color: "Azure"}}/> The World's 50 Best Restaurants</h2>
             <br/>
             <br/>
             <h2><BsFillAwardFill/> Restaurant & Bar Design Awards</h2>
@@ -97,7 +97,7 @@ class Landingpage extends Component {
                   <h3>GRND Restaurant</h3>
                   <p>
                     <blockquote>
-                      Best expereince i ever had in a restaurant
+                      Best expereince I ever had in a restaurant
                     </blockquote>
                   </p>
                 </Carousel.Caption>

@@ -2,3 +2,8 @@
     min-height: 100vh;
     background-image: url(../../Assets/Images/bg.png);
 }
+.main-container404 h1, h4{
+    text-align: center;
+    margin:auto;
+    color: gold;
+}

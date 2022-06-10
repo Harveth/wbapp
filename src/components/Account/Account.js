@@ -1,7 +1,10 @@
 import { Component } from "react";
 import { yellow } from '@mui/material/colors';
 import Avatar from '@mui/material/Avatar';
+import axios from "axios";
 import './Account.css';
+
+const SERVER = "http://localhost:6969";
 
 
 class Account extends Component {

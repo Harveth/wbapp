@@ -11,7 +11,7 @@ import Footer from './components/Footer/Footer';
 import Signin from './components/Signin/Signin'
 import Signup from './components/Signup/Signup'
 import Items from './components/Items/Items'
-import Not_Found from './components/Not found/Not_Found';
+import Not_Found from './components/Not_found/Not_Found';
 import Cart from './components/Cart/Cart';
 import AddItem from './components/AddItem/AddItem';
 
@@ -87,7 +87,7 @@ class App extends Component {
             <Route path='/items' element={<Items/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/additem' element={<AddItem/>}/>
-            <Route path ='*'component={<Not_Found/>} />
+            <Route path='*' element={<Not_Found/>} />
           </Routes>
           </div>
           <Footer/>
