@@ -1,9 +1,10 @@
 import { NavDropdown } from 'react-bootstrap';
 import { Component } from 'react';
 import { AiOutlineHome } from "react-icons/ai";
-import { BiPhotoAlbum } from "react-icons/bi";
+import { BiPhotoAlbum,BiReceipt } from "react-icons/bi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
+import {BsGrid1X2} from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import React from 'react';
 import '../Navbar/Navbar.css';
@@ -48,10 +49,10 @@ class Navbar extends Component {
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Gallery</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/items" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Items</Link>
+              <Link to="/items" style={{ textDecoration: "none" }}><BsGrid1X2 className="navicon" />Items</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Orders</Link>
+              <Link to="/gallery" style={{ textDecoration: "none" }}><BiReceipt className="navicon" />Orders</Link>
             </li>
             </ul>
             <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>

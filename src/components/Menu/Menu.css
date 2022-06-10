@@ -6,7 +6,7 @@
     
 }
 
-*{
+.menuback *{
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
@@ -27,14 +27,14 @@
 	
 }
 
-html{
+.menuback html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
 
-section{
+.menuback section{
     padding:2rem 9%;
 }
 
@@ -140,7 +140,7 @@ section{
 	border-radius: 30px;
 	transition: .5s;
 }
-section:nth-child(even){
+.menuback section:nth-child(even){
     background-image: url("../../Assets/Images/bg1.jpg");
 }
 
@@ -175,7 +175,7 @@ section:nth-child(even){
     letter-spacing: .1rem;
 }
 
-header{
+.menuback header{
     position: fixed;
     top:0; left: 0; right:0;
     background: #fff;
@@ -187,31 +187,31 @@ header{
     box-shadow: var(--box-shadow);
 }
 
-header .logo{
+.menuback .logo{
     color:var(--black);
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
-header .logo i{
+.menuback .logo i{
     color:var(--green);
 }
 
-header .navbar a{
+.menuback .navbar a{
     font-size: 1.7rem;
     border-radius: .5rem;
     padding:.5rem 1.5rem;
     color:var(--light-color);
 }
 
-header .navbar a.active,
-header .navbar a:hover{
+.menuback .navbar a.active,
+.menuback .navbar a:hover{
     color:#fff;
     background: var(--green);
 }
 
-header .icons i,
-header .icons a{
+.menuback .icons i,
+.menuback .icons a{
     cursor: pointer;
     margin-left: .5rem;
     height:4.5rem;
@@ -224,14 +224,14 @@ header .icons a{
     background: #eee;
 }
 
-header .icons i:hover,
-header .icons a:hover{
+.menuback .icons i:hover,
+.menuback .icons a:hover{
     color:#fff;
     background: var(--red);
     transform: rotate(360deg);
 }
 
-header .icons #menuu-bars{
+.menuback .icons #menuu-bars{
     display: none;
 }
 .wrapper {

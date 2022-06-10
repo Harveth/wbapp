@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 400px 400px 400px;
 }
-section{
+.menuback section{
     padding:2rem 9%;
 }
 
