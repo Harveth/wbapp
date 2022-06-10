@@ -14,7 +14,8 @@ import Items from './components/Items/Items'
 import Not_Found from './components/Not_found/Not_Found';
 import Cart from './components/Cart/Cart';
 import AddItem from './components/AddItem/AddItem';
-
+import Requests from './components/Quality_Control/Requests';
+import Users from './components/Quality_Control/Users';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route , Routes} from 'react-router-dom';
@@ -87,6 +88,8 @@ class App extends Component {
             <Route path='/items' element={<Items/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/additem' element={<AddItem/>}/>
+            <Route path='/requests' element={<Requests/>}/>
+            <Route path='/users' element={<Users/>}/>
             <Route path='*' element={<Not_Found/>} />
           </Routes>
           </div>
