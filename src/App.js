@@ -30,7 +30,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: 'cashier',
+      type: 'quality_control',
       isAccountActive: false
 
     }
