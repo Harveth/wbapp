@@ -72,6 +72,8 @@ class Items extends Component {
           });
       };
 
+      
+
     componentDidMount(){
         this.loadItems();
         
@@ -92,7 +94,7 @@ class Items extends Component {
           let rows = [];
           for(let i = 1; i < this.state.items.length; i++){
             if(this.state.items[i].name.toLowerCase().includes(this.state.searchString.toLowerCase())){
-              rows.push(<Item_card className="itm-child" foodName={this.state.items[i].name} price={this.state.items[i].price} description={this.state.items[i].description}/>);
+              rows.push(<Item_card className="itm-child" id={this.state.items[i].id} foodName={this.state.items[i].name} price={this.state.items[i].price} description={this.state.items[i].description} />);
             }
           }
           //return rows;
