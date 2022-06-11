@@ -104,17 +104,41 @@ class Menu extends Component {
   componentDidMount() {
     this.loadItems();
   }
+
+  removeItemFromCart = (foodID) => {
+    const { cookies } = this.props;
+    let currCart = cookies.get("cart");
+    if (currCart === null || currCart === undefined) {
+      currCart = [];
+    }
+    else{
+      // currCart = JSON.parse(currCart);
+    }
+    if (!this.doesInclude(currCart, foodID)) {
+      return;
+    }
+    else if (this.doesInclude(currCart, foodID)) {
+      currCart[this.indexOfFood(currCart, foodID)].quantity = currCart[this.indexOfFood(currCart, foodID)].quantity - 1;
+      if (currCart[this.indexOfFood(currCart, foodID)].quantity === 0) {
+        currCart.splice(this.indexOfFood(currCart, foodID), 1);
+      }
+    }
+  }
+  removeAllFromCart = () => {
+    const { cookies } = this.props;
+    cookies.set("cart", "", { path: "/" });
+  }
   render() {
     const { cookies } = this.props;
     // const displayItems = () =>{
     //   for(let i = 0;i<this.state.item.length;i++){
-    //     return<Menucard className="" 
-    //     name ={this.state.item[i].name} 
-    //     description={this.state.item[i].description} 
-    //     type ={this.state.item[i].type} 
-    //     price={this.state.item[i].price} 
+    //     return<Menucard className=""
+    //     name ={this.state.item[i].name}
+    //     description={this.state.item[i].description}
+    //     type ={this.state.item[i].type}
+    //     price={this.state.item[i].price}
     //     image={this.state.item[i].image}/>
-        
+
     //      }
     // }
     // let rows=[];
