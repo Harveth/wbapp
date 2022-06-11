@@ -36,23 +36,14 @@ class Item_card extends Component{
 
    render(){
         return(
-            <div className="menuitms">
-                <div className="itms_row">
-                    <div className="itms_col">
-                        <h2>{this.props.foodName}</h2>
-                                <div className='box-img'>    
-                                <img src={this.props.imgPath} className="itm-img" alt="food image" />
-                            </div>
-                                <div>
+                    <div className="itms_col col">   
+                                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/processed-food700-350-e6d0f0f.jpg?quality=90&resize=556,505" className="itm-img" alt="food image" />
+                                    <h1>{this.props.foodName}</h1> 
                                     <p>{this.props.description}</p>
                                     <h4>{this.props.price} $</h4>
-                                </div>
-                                <button>Edit---</button>
-                                <button onClick={this.deleteItemUtil}>--Delete</button>
+                                <button className='btn-pos'>Edit</button>
+                                <button className='btn-pos' onClick={this.deleteItemUtil}>Delete</button>
                     </div>
-                            
-                </div>
-            </div>
         )
    }
 }

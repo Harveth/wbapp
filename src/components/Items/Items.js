@@ -105,19 +105,10 @@ class Items extends Component {
         return (
         <div className="container">
                 <h1> Items: </h1>
-                <input type="text" placeholder="Search Items" onChange={this.onSearchChange}/>
-                <p>
-              <Link to="/additem" >Add</Link>
-                </p>
-                <div className="item-container">
-                  {/*<Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                */}
+                <input type="text" placeholder="Search Items" className="srchbar" onChange={this.onSearchChange}/>
+                <Link className="lnkbtn" to="/additem" >Add</Link>
+                <div className="item-container row">
                 {rows}
-    
                 </div>
         </div>
           );
