@@ -1,13 +1,24 @@
 import './Item_card.css'
 import axios from "axios";
 import { Component } from 'react';
+import { Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import EditItem from '../EditItem/EditItem';
+import { withCookies, Cookies } from "react-cookie";
+import {instanceOf} from "prop-types";
 const SERVER = "http://localhost:6969";
 
 
 
 class Item_card extends Component{
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+      };
     constructor(props) {
         super(props);
+        this.state = {
+            isEdit: false
+        }
       }
 
 
@@ -33,6 +44,15 @@ class Item_card extends Component{
         this.deleteItem(this.props.id);
       }
 
+      sendCookie = () =>{
+        const { cookies } = this.props;
+        cookies.set("editId", this.props.id, { path: "/" });
+        cookies.set("editName", this.props.foodName, { path: "/" });
+        cookies.set("editPrice", this.props.price, { path: "/" });
+        cookies.set("editType", this.props.type, { path: "/" });
+        cookies.set("editDescription", this.props.description, { path: "/" });
+      }
+
 
    render(){
         return(
@@ -48,4 +68,4 @@ class Item_card extends Component{
    }
 }
 
-export default Item_card;
+export default withCookies(Item_card);

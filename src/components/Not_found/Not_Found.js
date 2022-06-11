@@ -1,6 +1,4 @@
 import { Component } from "react";
-import { Link } from 'react-router-dom';
-
 import './Not_Found.css';
 
 class Not_Found extends Component {
