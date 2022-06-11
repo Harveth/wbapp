@@ -79,7 +79,6 @@ class CashierOrders extends Component {
                 <h1> Orders: </h1>
                 <input type="text" placeholder="Search Items" onChange={this.onSearchChange}/>
                 <p>
-              <Link to="/additem" >Add</Link>
                 </p>
                 <div className="item-container">
                   {/*<Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
