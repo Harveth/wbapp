@@ -52,7 +52,7 @@ class Navbar extends Component {
               <Link to="/items" style={{ textDecoration: "none" }}><BsGrid1X2 className="navicon" />Items</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/gallery" style={{ textDecoration: "none" }}><BiReceipt className="navicon" />Orders</Link>
+              <Link to="/cashierorders" style={{ textDecoration: "none" }}><BiReceipt className="navicon" />Orders</Link>
             </li>
             </ul>
             <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>
