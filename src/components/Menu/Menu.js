@@ -85,7 +85,6 @@ class Menu extends Component {
   addToCart = (foodID) => {
     const { cookies } = this.props;
     let currCart = cookies.get("cart");
-    console.log("ZEFT CURRENT NILA");
     console.log(currCart);
     if (currCart === null || currCart === undefined) {
       currCart = [];
@@ -97,7 +96,6 @@ class Menu extends Component {
       currCart.push({ foodID: foodID, quantity: 1 });
     }
     else if (this.doesInclude(currCart, foodID)) {
-      console.log("KILL AMR");
       currCart[this.indexOfFood(currCart, foodID)].quantity = currCart[this.indexOfFood(currCart, foodID)].quantity + 1;
     }
 
@@ -130,6 +128,7 @@ class Menu extends Component {
             }
           }
     console.log(cookies.get("cart"));
+
     return (
       <div className="menuback">
         <nav className='navbar navbar-expand-lg navbar-dark bg-transparent'>
@@ -137,34 +136,16 @@ class Menu extends Component {
             <div className='navbar bg-trans'>
               <ul className='navbar-nav me-auto mb-3 mb-lg-5' style={{ paddingLeft: 365 }}>
                 <li className='nav-item'>
-                  <Link to="/home" style={{ textDecoration: "none", fontSize: '15px' }}> Appetizers</Link>
+                  <Link to="/home" style={{ textDecoration: "none", fontSize: '15px' }}>Drinks</Link>
                 </li>
                 <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Salads</Link>
+                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Breakfast</Link>
                 </li>
                 <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Soups</Link>
+                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Lunch</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link to="/menu" style={{ textDecoration: "none", fontSize: '15px' }}>Beef</Link>
-                </li>
-                <li className='nav-item'>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Chicken</Link>
-                </li>
-                <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Pizza</Link>
-                </li>
-                <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Pasta</Link>
-                </li>
-                <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Sandwiches</Link>
-                </li>
-                <li>
-                  <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Desserts</Link>
-                </li>
-                <li>
-                  <Link to="/sand" style={{ textDecoration: "none", fontSize: '15px' }}>Compose a Sandwich</Link>
+                  <Link to="/menu" style={{ textDecoration: "none", fontSize: '15px' }}>Compose a sandwich</Link>
                 </li>
               </ul>
             </div>

@@ -13,7 +13,7 @@
     list-style-type:none;
     padding: 10px;
 }
-a:link, a:visited{ 
+.menu a:link, .menu a:visited{ 
 color: goldenrod;
 }
 .menu a,
