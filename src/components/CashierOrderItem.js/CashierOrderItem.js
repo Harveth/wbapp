@@ -13,6 +13,23 @@ class CashierOrderItem extends Component{
         }
       }
 
+      cancelOrder = async () => {
+        await axios
+          .post(`${SERVER}/ServerPHP/deleteOrder.php`, {
+              id : this.props.id
+          })
+          .then((res) => {
+            if (res.data == "error") {
+                console.log("error");
+              } else {
+                console.log("loggin response");
+                console.log(res.data);
+               
+               
+              }
+          });
+      };
+
 
    render(){
         return(
@@ -32,8 +49,8 @@ class CashierOrderItem extends Component{
                                 
 
                                 
-                                <button>--Delete</button>
-                                <button>--Cancel</button>
+                                <button>--Approve</button>
+                                <button onClick={this.cancelOrder}>--Cancel</button>
                     </div>
                             
                 </div>
