@@ -148,6 +148,9 @@ class Menu extends Component {
                 <li>
                   <Link to="/gallery" style={{ textDecoration: "none", fontSize: '15px' }}>Desserts</Link>
                 </li>
+                <li>
+                  <Link to="/sand" style={{ textDecoration: "none", fontSize: '15px' }}>Compose a Sandwich</Link>
+                </li>
               </ul>
             </div>
           </div>

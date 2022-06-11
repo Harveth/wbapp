@@ -81,7 +81,7 @@ class App extends Component {
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
-            <Route path='/account' element={<Account isActive={this.state.isAccountActive}/>}/>
+            <Route path='/account' element={<Account id={this.state.id}/>}/>
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
             <Route path='/items' element={<Items/>}/>
