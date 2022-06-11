@@ -70,7 +70,7 @@ class Menucard extends Component{
                         <h3>{this.props.type}</h3>
                         <p>{this.props.description}</p>
                         <h4>{this.props.price} $</h4>
-                        <button className="btn" style={{ backgroundColor: '#5e503f' }} onClick={() => this.addToCart(1)}>Add To Cart</button>
+                        <button className="btn" style={{ backgroundColor: 'goldenrod' }} onClick={() => this.addToCart(1)}>Add To Cart</button>
                                 {/* <Link to="/edititem" onClick={this.sendCookie}>Edit</Link>
 
                                 
