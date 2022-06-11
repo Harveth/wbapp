@@ -252,24 +252,6 @@
     padding-top: 90px;
     
   }
-  /* .mina{
-    display : block;
-background: rgb(0, 0, 0) none repeat scroll 0% 0% / auto
-padding-box border-box;
-margin : Opx;
-padding : Opx;
-border : Opx none rgba(0, 0, 0, 0.9);
-font : 11px / 16px Inter, sans-serif;
-vertical-align : baseline;
-outline : rgba(0, 0, 0, 0.9) none Opx;
-letter-spacing : normal;
-text-decoration : none solid rgba(0, 0, 0, 0.9);
-cursor : -webkit-image- set (url ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAA 2x"
-, url("data:image/png;base64,iVBORWOKGgoAAAANSUhEUgAAAEAAAABACAYAAACgaXA:AA1x" ) 44, auto));
-
-  } */
-  /* The navigation menuu
-  links */
   .h11 li {
     padding: 35px 5px 0px 10px;
     text-decoration: none;
@@ -277,15 +259,10 @@ cursor : -webkit-image- set (url ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
     color: white;
     display: inline;
     float:left;
-    /* padding-top: px; */
+    
   }
   
-  /* When you mouse over the navigation links, change their color */
+  
   .h11 a:hover {
     color: #f4b41a;
   }
-  /* p{
-    font-size: 1.6rem;
-    padding:.5rem 0;
-    line-height: 1.5;
-  } */
