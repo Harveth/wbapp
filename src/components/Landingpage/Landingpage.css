@@ -38,8 +38,8 @@
 }
 
 .menu a,
-a:link,
-a:visited {
+.menu a:link,
+.menu a:visited {
   color: goldenrod;
 }
 .menu a:hover, account:hover {
