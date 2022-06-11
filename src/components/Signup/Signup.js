@@ -9,6 +9,8 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      signUpFn:"",
+      signUpLn:"",
       signUpUsername: "",
       signUpPassword: "",
       signUpEmail: "",
@@ -25,6 +27,8 @@ class Signup extends Component {
         password: this.state.signUpPassword,
         username: this.state.signUpUsername,
         phoneNumber: this.state.signUpPhoneNumber,
+        firstname: this.state.signUpFn,
+        firstname: this.state.signUpln
       })
       .then((res) => {
         if (res.data == "error") {
@@ -38,9 +42,14 @@ class Signup extends Component {
       });
   };
 
+  onFnChange = (event) => {
+    this.setState({ signUpFn: event.target.value });
+  };
+  onLnChange = (event) => {
+    this.setState({ signUpLn: event.target.value });
+  };
   onUsernameChange = (event) => {
     this.setState({ signUpUsername: event.target.value });
-    console.log(this.state);
   };
   onEmailChange = (event) => {
     this.setState({ signUpEmail: event.target.value });
@@ -52,13 +61,20 @@ class Signup extends Component {
     this.setState({ signUpPhoneNumber: event.target.value });
   };
 
+
   logState = () => {
     console.log(this.state);
   };
 
   render() {
-      if(this.state.signUpSuccessful)
-        return <Navigate to="/home"/>
+      if(this.state.signUpSuccessful){
+        <div className="alert alert-success" role="alert">
+        <h4 className="alert-heading">Success!</h4>
+        <p>You completed Sign up .</p>
+        <hr/>
+        <p className="mb-0">A request has been sent to the Quality Control department.</p>
+      </div>
+      }
     return (
       <body className="bgrnd1">
         <div className="Signup-Inputs">
@@ -66,8 +82,14 @@ class Signup extends Component {
           <h1>Sign Up</h1>
           <input
             className="input-box"
-            placeholder="Email Address"
-            onChange={this.onEmailChange}
+            placeholder="First name"
+            onChange={this.onFnChange}
+          ></input>
+          <br />
+          <input
+            className="input-box"
+            placeholder="Last name"
+            onChange={this.onLnChange}
           ></input>
           <br />
           <input
@@ -85,13 +107,24 @@ class Signup extends Component {
           <br />
           <input
             className="input-box"
+            placeholder="Email Address"
+            onChange={this.onEmailChange}
+          ></input>
+          <br />
+          <input
+            className="input-box"
             placeholder="Phone number"
             onChange={this.onPhoneNumberChange}
           ></input>
+
           <input type="file" id="actual-btn" hidden/>
           <label for="actual-btn" className="lbl-btn">Choose File</label>
           <span id="file-chosen" className="span-txt">Upload your national ID</span>
-          <br />
+
+          <input type="file" id="actual-btn" hidden/>
+          <label for="actual-btn" className="lbl-btn">Choose File</label>
+          <span id="file-chosen" className="span-txt">Upload a picture</span>
+
           <p className="smol">
             Already have an account? <a href="/Signin">Sign in</a>
           </p>
