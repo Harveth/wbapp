@@ -13,8 +13,7 @@ class CashierOrders extends Component {
             {
                 id: '',
                 name: '',
-                description: '',
-                rating: ''
+                foodName: ''
             }
         ],
         searchString: ''
@@ -32,20 +31,16 @@ class CashierOrders extends Component {
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // const item = {
-                //   id: res.data.id,
-                //   name: res.data.name,
-                //   type: res.data.type,
-                //   price: res.data.price
-
-                // }
-                // console.log("loggin item");
-                // console.log(item);
-                // this.setState(prevState => ({
-                //   items : [...prevState.items, item]
-                // }))
-                // console.log("loggin state");
-                // console.log(this.state);
+                for(let i = 0; i < res.data.length; i++){
+                  const order = {
+                    id: res.data[i].id,
+                    username: res.data[i].user,
+                    foodName: res.data[i].item,
+                  }
+                    this.setState(prevState => ({
+                    orders : [...prevState.orders, order]
+                }), () =>{ console.log(this.state);})
+                }
                 
               }
           });
@@ -69,12 +64,11 @@ class CashierOrders extends Component {
 
           console.log("displayin orders");
           console.log(this.state.orders.length);
-        //   let rows = [];
-        //   for(let i = 1; i < this.state.items.length; i++){
-        //     if(this.state.items[i].name.toLowerCase().includes(this.state.searchString.toLowerCase())){
-        //       rows.push(<Item_card className="itm-child" id={this.state.items[i].id} foodName={this.state.items[i].name} price={this.state.items[i].price} description={this.state.items[i].description} type={this.state.items[i].type}/>);
-        //     }
-        //   }
+          let rows = [];
+          for(let i = 1; i < this.state.orders.length; i++){
+              rows.push(<CashierOrderItem id={this.state.orders[i].id} user={this.state.orders[i].username} foodName={this.state.orders[i].foodName}/>);
+
+          }
           //return rows;
           //this.state.items.map((item, i) =>{<Item_card className="itm-child" description={this.state.items[i].description}/>})
 
@@ -94,8 +88,7 @@ class CashierOrders extends Component {
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                 */}
-                <CashierOrderItem/>
-    
+                {rows}
                 </div>
         </div>
           );
