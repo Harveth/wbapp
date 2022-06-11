@@ -13,25 +13,48 @@ class Signup extends Component {
       signUpPassword: "",
       signUpEmail: "",
       signUpPhoneNumber: "",
+      signUpNationalID: "",
+      signUpPicture: "",
       signUpSuccessful: false
     };
   }
 
-
-  su = async () => {
-    await axios
+  uploadFile = () => {  // upload files to server
+    let returnData;
+    const file = document.getElementById("actual-btn").files[0];
+    const file2 = document.getElementById("actual-btn-2").files[0];
+    const formData = new FormData();
+    formData.append("nationalID", file);
+    formData.append("picture", file2);
+    axios
+      .post(`${SERVER}/ServerPHP/upload.php`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      })
+      .then(res => {
+        console.log(res.data);
+        this.setState({signUpNationalID: res.data[0]});
+        this.setState({signUpPicture: res.data[1]});
+        setTimeout(this.su, 500);
+        return res.data;
+      })
+  }
+  su = () => {
+    axios
       .post(`${SERVER}/ServerPHP/register.php`, {
-        email: this.state.signUpUsername,
+        email: this.state.signUpEmail,
         password: this.state.signUpPassword,
         username: this.state.signUpUsername,
         phoneNumber: this.state.signUpPhoneNumber,
+        nationalID: this.state.signUpNationalID,
+        picture: this.state.signUpPicture
       })
       .then((res) => {
         if (res.data == "error") {
           console.log("error creating user");
         } else {
           console.log(res.data);
-          console.log(res.data.username);
           this.props.sendData(res.data.username);
           this.setState({signUpSuccessful : true});
         }
@@ -82,16 +105,21 @@ class Signup extends Component {
             placeholder="Password"
             onChange={this.onPasswordChange}
           ></input>
-          <br />
+
           <input
             className="input-box"
             placeholder="Phone number"
             onChange={this.onPhoneNumberChange}
           ></input>
+
           <input type="file" id="actual-btn" hidden/>
           <label for="actual-btn" className="lbl-btn">Choose File</label>
           <span id="file-chosen" className="span-txt">Upload your national ID</span>
-          <br />
+
+          <input type="file" id="actual-btn-2" hidden/>
+          <label for="actual-btn-2" className="lbl-btn">Choose File</label>
+          <span id="file-chosen" className="span-txt">Upload a picture</span>
+
           <p className="smol">
             Already have an account? <a href="/Signin">Sign in</a>
           </p>
@@ -100,7 +128,7 @@ class Signup extends Component {
             <input type="checkbox"></input>I Agree to the{" "}
             <a href="#">terms and conditions</a>{" "}
           </p>
-          <button className="signup-btn" onClick={this.su}>
+          <button className="signup-btn" onClick={this.uploadFile}>
             {" "}
             Sign Up
           </button>
