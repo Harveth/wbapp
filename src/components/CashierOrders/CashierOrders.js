@@ -1,38 +1,28 @@
 import { Component } from "react";
-import Item_card from "./Item_card";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import './items.css'
+import CashierOrderItem from "../CashierOrderItem.js/CashierOrderItem";
 const SERVER = "http://localhost:6969";
 
-class item{
-    constructor(id, name, description, rating){
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.rating = rating;
-    }
-}
 
-class Items extends Component {
+class CashierOrders extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        items: [
+        orders: [
             {
                 id: '',
                 name: '',
-                description: '',
-                rating: ''
+                foodName: ''
             }
         ],
         searchString: ''
       };
     }
 
-    loadItems = async () => {
+    loadOrders = async () => {
         await axios
-          .post(`${SERVER}/ServerPHP/items.php`, {
+          .post(`${SERVER}/ServerPHP/cashierOrders.php`, {
               req: "requestforitems"
           })
           .then((res) => {
@@ -41,33 +31,17 @@ class Items extends Component {
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // const item = {
-                //   id: res.data.id,
-                //   name: res.data.name,
-                //   type: res.data.type,
-                //   price: res.data.price
-
-                // }
-                // console.log("loggin item");
-                // console.log(item);
-                // this.setState(prevState => ({
-                //   items : [...prevState.items, item]
-                // }))
-                // console.log("loggin state");
-                // console.log(this.state);
                 for(let i = 0; i < res.data.length; i++){
-                  const item = {
+                  const order = {
                     id: res.data[i].id,
-                    name: res.data[i].name,
-                    type: res.data[i].type,
-                    price: res.data[i].price,
-                    description: res.data[i].description
+                    username: res.data[i].user,
+                    foodName: res.data[i].item,
                   }
                     this.setState(prevState => ({
-                    items : [...prevState.items, item]
+                    orders : [...prevState.orders, order]
                 }), () =>{ console.log(this.state);})
-               
                 }
+                
               }
           });
       };
@@ -75,8 +49,7 @@ class Items extends Component {
       
 
     componentDidMount(){
-        this.loadItems();
-        
+        this.loadOrders();
     }
 
     onSearchChange = (event) =>{
@@ -89,13 +62,12 @@ class Items extends Component {
   
     render() {
 
-          console.log("displayin items");
-          console.log(this.state.items.length);
+          console.log("displayin orders");
+          console.log(this.state.orders.length);
           let rows = [];
-          for(let i = 1; i < this.state.items.length; i++){
-            if(this.state.items[i].name.toLowerCase().includes(this.state.searchString.toLowerCase())){
-              rows.push(<Item_card className="itm-child" id={this.state.items[i].id} foodName={this.state.items[i].name} price={this.state.items[i].price} description={this.state.items[i].description} type={this.state.items[i].type}/>);
-            }
+          for(let i = 1; i < this.state.orders.length; i++){
+              rows.push(<CashierOrderItem id={this.state.orders[i].id} user={this.state.orders[i].username} foodName={this.state.orders[i].foodName}/>);
+
           }
           //return rows;
           //this.state.items.map((item, i) =>{<Item_card className="itm-child" description={this.state.items[i].description}/>})
@@ -104,7 +76,7 @@ class Items extends Component {
         const Testurl = "https://www.seriouseats.com/thmb/OBckE8o3ypWrULAwlkb11RvKD7w=/1000x1000/smart/filters:no_upscale()/20210714-potato-starch-fried-chicken-vicky-wasik-seriouseats-20-17e193a6bf274bba9091810a0b18ef89.jpg";
         return (
         <div className="container">
-                <h1> Items: </h1>
+                <h1> Orders: </h1>
                 <input type="text" placeholder="Search Items" onChange={this.onSearchChange}/>
                 <p>
               <Link to="/additem" >Add</Link>
@@ -117,11 +89,10 @@ class Items extends Component {
                   <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
                 */}
                 {rows}
-    
                 </div>
         </div>
           );
       }
   }
   
-  export default Items;
+  export default CashierOrders;

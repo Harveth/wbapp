@@ -14,6 +14,8 @@ import Items from './components/Items/Items'
 import Not_Found from './components/Not_found/Not_Found';
 import Cart from './components/Cart/Cart';
 import AddItem from './components/AddItem/AddItem';
+import EditItem from './components/EditItem/EditItem';
+import CashierOrders from './components/CashierOrders/CashierOrders'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -81,12 +83,14 @@ class App extends Component {
             <Route path='/home' element={<Landingpage/>}/>
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
-            <Route path='/account' element={<Account isActive={this.state.isAccountActive}/>}/>
+            <Route path='/account' element={<Account id={this.state.id}/>}/>
             <Route path='/signin' element={<Signin/>}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
             <Route path='/items' element={<Items/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/additem' element={<AddItem/>}/>
+            <Route path='/edititem' element={<EditItem/>}/>
+            <Route path='/cashierorders' element={<CashierOrders/>}/>
             <Route path='*' element={<Not_Found/>} />
           </Routes>
           </div>
