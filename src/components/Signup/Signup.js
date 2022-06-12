@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./Signup.css";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
+import { BiExit } from "react-icons/bi";
 const SERVER = "http://localhost:6969";
 
 class Signup extends Component {
@@ -24,6 +25,16 @@ class Signup extends Component {
   //   valid=false;
 
   uploadFile = () => {  // upload files to server
+    if(this.state.signUpFn === "" || this.state.signUpLn === "" || this.state.signUpUsername === "" || this.state.signUpPassword === "" || this.state.signUpPasswordC === "" || this.state.signUpEmail === "" || this.state.signUpPhoneNumber === "" ){
+      alert("Please fill in all fields");
+      console.log(this.state);
+      return;
+    }
+    if((this.state.signUpPassword !== this.state.signUpPasswordC)){
+      alert("Passwords do not match");
+      return;
+    }
+
     let returnData;
     const file = document.getElementById("actual-btn").files[0];
     const file2 = document.getElementById("actual-btn-2").files[0];
@@ -95,14 +106,7 @@ class Signup extends Component {
 
   render() {
     if (this.state.signUpSuccessful) {
-      <div className="alert alert-success" role="alert">
-        <h4 className="alert-heading">Success!</h4>
-        <p>You completed Sign up .</p>
-        <hr />
-        <p className="mb-0">
-          A request has been sent to the Quality Control department.
-        </p>
-      </div>;
+      return <Navigate to="/home"/>
     }
     return (
       <body className="bgrnd1">

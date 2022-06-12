@@ -1,0 +1,54 @@
+.navbar{
+    height: 10vh;
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    background-image: linear-gradient(black, #121212);
+     border-color: none;
+ }
+ .navbar li{
+     font-size: 30px;
+     display: inline-block;
+     list-style-type:none;
+     padding: 10px;
+ }
+ a:link, a:visited{ 
+ color: goldenrod;
+ }
+ .menu a,
+ a:link,
+ a:visited {
+   color: goldenrod;
+ }
+ .menu a:hover, account:hover {
+   color: gold;
+ }
+ 
+ .account{
+     color: goldenrod;
+ }
+ .account:hover{
+     color: gold;
+ }
+ a.dropdown-toggle.nav-link::after{
+     display: none;
+ }
+ 
+ .dropdown-menu.show {
+     display: block;
+     background-color: #121212;
+ }
+ .dropdown-menu.show :hover, .dropdown-menu.show :visited{
+     background-color: #121212;
+ }
+ .dropdown-item{
+     font-size: 20px;
+ }
+ a.dropdown-item:hover{
+     color: gold;
+ }
+ a.dropdown-item:focus{
+     color: goldenrod;
+ }
+ 
