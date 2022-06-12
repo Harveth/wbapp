@@ -33,7 +33,7 @@ class AddItem extends Component{
 
             console.log(res.data);
             this.setState({img: res.data});
-            setTimeout(this.addNewItem, 3000);
+            setTimeout(this.addNewItem, 500);
             console.log("hellooooooo");
 
             console.log(this.state.img);
@@ -42,7 +42,7 @@ class AddItem extends Component{
 
 
       }
-      
+
 
       onNameChange = (event) =>{
         this.setState({name : event.target.value});
@@ -78,19 +78,19 @@ class AddItem extends Component{
               console.log("error adding item");
             } else {
               console.log(res.data);
-              
+              alert("item added");
             }
           });
       };
 
-      
+
 
       render() {
       return (
       <body className="vhcntr">
       <div className="add-container col-md-5">
               <h1> Add a new Item  </h1>
-              
+
               <Stack className="item-container">
                 <div>
                 <input type="text" className="add-box" placeholder="Name" onChange={this.onNameChange}/>
@@ -120,7 +120,7 @@ class AddItem extends Component{
                 <button className="add-btn" onClick={this.uploadFile}>Add
                 </button>
                 </div>
-                
+
               </Stack>
       </div>
       </body>
