@@ -1,8 +1,8 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
 import './AddItem.css'
 import axios from "axios";
 import { Stack } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const SERVER = "http://localhost:6969";
 
 class AddItem extends Component{
@@ -47,7 +47,7 @@ class AddItem extends Component{
           })
           .then((res) => {
             if (res.data == "error") {
-              console.log("error creating user");
+              console.log("error adding item");
             } else {
               console.log(res.data);
               
@@ -71,13 +71,22 @@ class AddItem extends Component{
                 <input type="text" className="add-box" placeholder="price" onChange={this.onPriceChange}/>
                 </div>
                 <div>
-                <input type="text" className="add-box" placeholder="type" onChange={this.ontypeChange}/>
+                {/* <input type="text" className="add-box" placeholder="type" onChange={this.ontypeChange}/> */}
+                <select  id="type" className="add-box" placeholder="type" onChange={this.ontypeChange}>
+                <option value="drinks">drinks</option>
+                <option value="breakfast">breakfast</option>
+                <option value="lunch">lunch</option>
+                <option value="sandwich">sandwich</option>
+                </select >
                 </div>
                 <div>
                 <input type="text" className="add-box" placeholder="description" onChange={this.onDescriptionChange}/>
                 </div>
                 <div>
-                <button className="add-btn" onClick={this.addNewItem}>Add</button>
+                <Link to="/items">
+                <button className="add-btn" onClick={this.addNewItem}>Add
+                </button>
+                </Link>
                 </div>
                 
               </Stack>

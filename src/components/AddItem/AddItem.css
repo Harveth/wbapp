@@ -11,6 +11,9 @@
 }
 .vhcntr{
     min-height: 100vh;
+    background-image: url("../Items/bg.jpg");
+    background-repeat: repeat;
+      
 }
 .add-box{
     border-radius: 20px;
@@ -24,7 +27,7 @@
     margin-right:20px;
 }
 .add-btn{
-    background-color: rgb(0, 128, 233);;
+    background-color: gold;
     color: rgb(255, 255, 255);
     width:70%;
     border-radius: 20px;
