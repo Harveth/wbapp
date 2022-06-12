@@ -51,6 +51,24 @@ class PromoteUserCard extends Component{
         cookies.set("editDescription", this.props.description, { path: "/" });
       }
 
+      PromoteToQualityControl = async () => {
+        console.log("deleting in progress")
+        await axios
+          .post(`${SERVER}/ServerPHP/PromoteToQ.php`, {
+              id: this.props.id
+          })
+          .then((res) => {
+            if (res.data == "error") {
+                console.log("error");
+              } else {
+                console.log("loggin response");
+                console.log(res.data);
+                // window.location.reload(false);
+               
+              }
+          });
+      };
+
 
    render(){
         return(
@@ -59,7 +77,7 @@ class PromoteUserCard extends Component{
                                     <p>{this.props.username}</p>
                                     <h4>{this.props.type}</h4>
                                 <button className='btn-pos'>Promote To Cashier</button>
-                                <button className='btn-pos'>Promote To Quality-Control</button>
+                                <button className='btn-pos' onClick={this.PromoteToQualityControl}>Promote To Quality-Control</button>
                     </div>
         )
    }
