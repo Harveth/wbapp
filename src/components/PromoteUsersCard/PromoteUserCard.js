@@ -52,9 +52,25 @@ class PromoteUserCard extends Component{
       }
 
       PromoteToQualityControl = async () => {
-        console.log("deleting in progress")
         await axios
           .post(`${SERVER}/ServerPHP/PromoteToQ.php`, {
+              id: this.props.id
+          })
+          .then((res) => {
+            if (res.data == "error") {
+                console.log("error");
+              } else {
+                console.log("loggin response");
+                console.log(res.data);
+                // window.location.reload(false);
+               
+              }
+          });
+      };
+
+      PromoteToCashier = async () => {
+        await axios
+          .post(`${SERVER}/ServerPHP/PromoteToCashier.php`, {
               id: this.props.id
           })
           .then((res) => {
@@ -76,7 +92,7 @@ class PromoteUserCard extends Component{
                                     <h1>{this.props.id}</h1> 
                                     <p>{this.props.username}</p>
                                     <h4>{this.props.type}</h4>
-                                <button className='btn-pos'>Promote To Cashier</button>
+                                <button className='btn-pos' onClick={this.PromoteToCashier}>Promote To Cashier</button>
                                 <button className='btn-pos' onClick={this.PromoteToQualityControl}>Promote To Quality-Control</button>
                     </div>
         )
