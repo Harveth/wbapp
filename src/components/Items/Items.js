@@ -107,7 +107,7 @@ class Items extends Component {
                 <h1> Items: </h1>
                 <input type="text" placeholder="Search Items" className="srchbar" onChange={this.onSearchChange}/>
                 <Link className="lnkbtn" to="/additem" >Add</Link>
-                <div className="item-container row">
+                <div className="item-container row mw-25">
                 {rows}
                 </div>
         </div>
