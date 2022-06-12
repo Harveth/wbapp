@@ -80,8 +80,9 @@ class PromoteUsers extends Component {
         return (
         <div className="container">
                 <h1> Users: </h1>
-                <input type="text" placeholder="Search Items" className="srchbar" onChange={this.onSearchChange}/>
-                <div className="prm-container row">
+                <input type="text" placeholder="Search by username" className="srchbar" onChange={this.onSearchChange}/>
+
+                <div className="item-container row">
                 {rows}
                 </div>
         </div>

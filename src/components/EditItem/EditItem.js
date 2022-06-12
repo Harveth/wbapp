@@ -23,6 +23,9 @@ class EditItem extends Component{
           
         }
         console.log(this.state);
+        console.log(cookies);
+        // cookies.remove("editId");
+        // cookies.remove("editName");
       }
 
       onNameChange = (event) =>{
