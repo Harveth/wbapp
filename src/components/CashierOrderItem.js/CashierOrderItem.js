@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './CashierOrderItem.css'
 const SERVER = "http://localhost:6969";
 
 
@@ -35,9 +36,9 @@ class CashierOrderItem extends Component{
         return(
             <div className="menuitms">
                 <div className="itms_row">
-                    <div className="itms_col">
-                        <h2>{this.props.id}</h2>
-                        <h4>{this.props.user}</h4>
+                    <div className="cshr_itms col">
+                        <h2 className="cshr_hdr">Order Number : {this.props.id}</h2>
+                        <h4>Customers name : {this.props.user}</h4>
                                 <div className='box-img'>    
                                 {//<img src={this.props.imgPath} className="itm-img" alt="food image" />
                                 }
@@ -49,8 +50,8 @@ class CashierOrderItem extends Component{
                                 
 
                                 
-                                <button>--Approve</button>
-                                <button onClick={this.cancelOrder}>--Cancel</button>
+                                <button className="cshr_btn">Approve</button>
+                                <button className="cshr_btn two" onClick={this.cancelOrder}>Cancel</button>
                     </div>
                             
                 </div>

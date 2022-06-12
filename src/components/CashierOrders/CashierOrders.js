@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import CashierOrderItem from "../CashierOrderItem.js/CashierOrderItem";
+import './CashierOrders.css'
 const SERVER = "http://localhost:6969";
 
 
@@ -77,17 +78,11 @@ class CashierOrders extends Component {
         return (
         <div className="container">
                 <h1> Orders: </h1>
-                <input type="text" placeholder="Search Items" onChange={this.onSearchChange}/>
-                <p>
-              <Link to="/additem" >Add</Link>
-                </p>
-                <div className="item-container">
-                  {/*<Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                  <Item_card className="itm-child" imgPath={Testurl} description="this is a test description"/>
-                */}
+                <input type="text" className="inp-cshr" placeholder="Search Items" onChange={this.onSearchChange}/>
+                
+              <Link className="cshr-lnkbtn" to="/additem" >Add</Link>
+                
+                <div className="item-container col">
                 {rows}
                 </div>
         </div>
