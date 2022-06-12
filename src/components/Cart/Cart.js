@@ -2,6 +2,7 @@ import { Component } from "react";
 import './Cart.css';
 import { withCookies, Cookies } from "react-cookie";
 import {instanceOf} from "prop-types";
+import axios from "axios";
 
 class Cart extends Component {
     static propTypes = {
@@ -17,6 +18,57 @@ class Cart extends Component {
         }
         return currCart;
     }
+
+    doesInclude = (currCart, foodID) => {
+        for (let i = 0; i < currCart.length; i++) {
+          if (currCart[i].foodID === foodID) {
+            return true;
+          }
+        }
+        return false;
+      }
+      indexOfFood = (currCart, foodID) => {
+        for (let i = 0; i < currCart.length; i++) {
+          if (currCart[i].foodID === foodID) {
+            return i;
+          }
+        }
+        return -1;
+      }
+      addToCart = (foodID) => {
+        const { cookies } = this.props;
+        let currCart = cookies.get("cart");
+        console.log(currCart);
+        if (currCart === null || currCart === undefined) {
+          currCart = [];
+        }
+        else {
+          // currCart = JSON.parse(currCart);
+        }
+        if (!this.doesInclude(currCart, foodID)) {
+          currCart.push({ foodID: foodID, quantity: 1 });
+        }
+        else if (this.doesInclude(currCart, foodID)) {
+          currCart[this.indexOfFood(currCart, foodID)].quantity = currCart[this.indexOfFood(currCart, foodID)].quantity + 1;
+        }
+
+        cookies.set("cart", JSON.stringify(currCart), { path: "/" });
+      }
+
+    checkout(){
+        let currCart = this.getFoodFromCart();
+        axios.post(`http://localhost:6969/ServerPHP/makeorder.php`, {
+            currCart: currCart
+        }).then(res => {
+            if(res.data == 'no'){
+                console.log('error');
+            }
+            else {
+                console.log(res.data);
+            }
+        })
+    }
+
     render() {
         let currCart = this.getFoodFromCart();
       return (
@@ -53,7 +105,9 @@ class Cart extends Component {
                     })}
                 </tbody>
             </table>
-
+                    <button className="checkout-btn" onClick={() => this.checkout()}>Checkout</button>
+                    <button className="addtocart-btn" onClick={() => this.addToCart("1")}>Add to cart</button>
+                    <button className="addtocart2-btn" onClick={() => this.addToCart("2")}>Add to cart</button>
         </div>
         );
     }
