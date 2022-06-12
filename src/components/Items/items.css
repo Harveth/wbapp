@@ -1,6 +1,15 @@
-.container{ 
-    min-height: 100vh;
+.container{
+
     justify-content: space-around;
+
+}
+.main{
+  min-height: 100vh;
+  background-image: url("../Items/bg.jpg");
+  background-repeat: repeat;
+}
+.header{
+  color: gold;
 }
 .item-container{
     display:flex;
