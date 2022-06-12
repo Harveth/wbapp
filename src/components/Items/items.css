@@ -1,12 +1,22 @@
 .container{
-    min-height: 100vh;
+
     justify-content: space-around;
+
+}
+.main{
+  min-height: 100vh;
+  background-image: url("../Items/bg.jpg");
+  background-repeat: repeat;
+}
+.header{
+  color: gold;
 }
 .item-container{
     display:flex;
 }
 .itm-child{
     flex:1;
+    
     margin-right:20px;
 }
 .lnkbtn{

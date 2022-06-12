@@ -2,8 +2,9 @@
 .itms_col{
     box-shadow: 2px 2px 2px #bbb;
     border: 3px solid rgb(0, 0, 0);
-    height:30%;
+    min-height:30%;
     min-width: 25%;
+    width: 27%;
     max-width: 32%;
     background-color: #deb887;
     color: #454545;
@@ -12,7 +13,6 @@
     flex:1;
 }
 .itms_col h1{
-    width: 3%;
     margin:5px;
     text-align: center;
 }

@@ -103,13 +103,15 @@ class Items extends Component {
 
         const Testurl = "https://www.seriouseats.com/thmb/OBckE8o3ypWrULAwlkb11RvKD7w=/1000x1000/smart/filters:no_upscale()/20210714-potato-starch-fried-chicken-vicky-wasik-seriouseats-20-17e193a6bf274bba9091810a0b18ef89.jpg";
         return (
-        <div className="container">
-                <h1> Items: </h1>
+        <div className="main">
+        <div className="container row-xs-1-md-2">
+                <h1 className="header"> Items: </h1>
                 <input type="text" placeholder="Search Items" className="srchbar" onChange={this.onSearchChange}/>
                 <Link className="lnkbtn" to="/additem" >Add</Link>
-                <div className="item-container row">
+                <div className="item-container row mw-25">
                 {rows}
                 </div>
+        </div>
         </div>
           );
       }

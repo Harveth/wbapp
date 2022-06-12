@@ -11,7 +11,6 @@ class CashierOrders extends Component {
       super(props);
       this.state = {
         orders: [
-           
         ],
         searchString: ''
       };
@@ -38,12 +37,12 @@ class CashierOrders extends Component {
                     orders : [...prevState.orders, order]
                 }), () =>{ console.log(this.state);})
                 }
-                
+
               }
           });
       };
 
-      
+
 
     componentDidMount(){
         this.loadOrders();
@@ -54,9 +53,9 @@ class CashierOrders extends Component {
       this.setState({searchString: event.target.value});
       //console.log(this.state);
     }
-    
-  
-  
+
+
+
     render() {
 
           //console.log("displayin orders");
@@ -70,7 +69,8 @@ class CashierOrders extends Component {
 
           let rows = [];
           let curIncluded = [];
-          for(let i = 0; i < this.state.orders.length; i++){
+          if(!(this.state.orders[0] === undefined || this.state.orders.length === 0 || this.state.orders === null)){
+            for(let i = 0; i < this.state.orders.length; i++){
               if(curIncluded.includes(this.state.orders[i].id))
                 continue;
               var foodNames = [];
@@ -84,6 +84,8 @@ class CashierOrders extends Component {
               console.log(foodNames);
               rows.push(<CashierOrderItem id={this.state.orders[i].id} user={this.state.orders[i].username} names={foodNames}/>);
           }
+          }
+
 
 
         const Testurl = "https://www.seriouseats.com/thmb/OBckE8o3ypWrULAwlkb11RvKD7w=/1000x1000/smart/filters:no_upscale()/20210714-potato-starch-fried-chicken-vicky-wasik-seriouseats-20-17e193a6bf274bba9091810a0b18ef89.jpg";
@@ -91,9 +93,9 @@ class CashierOrders extends Component {
         <div className="container">
                 <h1> Orders: </h1>
                 <input type="text" className="inp-cshr" placeholder="Search Orders" onChange={this.onSearchChange}/>
-                
+
               <Link className="cshr-lnkbtn" to="/additem" >Add</Link>
-                
+
                 <div className="item-container col">
                 {rows}
                 </div>
@@ -101,5 +103,5 @@ class CashierOrders extends Component {
           );
       }
   }
-  
+
   export default CashierOrders;
