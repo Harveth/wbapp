@@ -32,6 +32,10 @@ class CashierOrderItem extends Component{
 
 
    render(){
+    // let rows = [];
+    //     for(let i = 0; i < this.props.names.length; i++){
+    //         rows.push(<p>{this.props.names[i]}</p>);
+    //       }
         return(
             <div className="menuitms">
                 <div className="itms_row">

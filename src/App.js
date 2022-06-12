@@ -31,7 +31,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: 'client',
+      type: 'cashier',
       isAccountActive: false
 
     }

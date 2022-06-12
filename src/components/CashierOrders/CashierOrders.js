@@ -65,6 +65,7 @@ class CashierOrders extends Component {
           console.log("displayin orders");
           console.log(this.state.orders.length);
           let rows = [];
+          this.state.orders.sort((a, b) => (a.id > b.id) ? 1 : -1)
           for(let i = 1; i < this.state.orders.length; i++){
               rows.push(<CashierOrderItem id={this.state.orders[i].id} user={this.state.orders[i].username} foodName={this.state.orders[i].foodName}/>);
 
