@@ -62,7 +62,7 @@ class PromoteUserCard extends Component{
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // window.location.reload(false);
+                window.location.reload(false);
                
               }
           });
@@ -79,7 +79,7 @@ class PromoteUserCard extends Component{
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // window.location.reload(false);
+                window.location.reload(false);
                
               }
           });

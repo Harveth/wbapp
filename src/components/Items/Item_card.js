@@ -61,7 +61,11 @@ class Item_card extends Component{
                                     <h1>{this.props.foodName}</h1> 
                                     <p>{this.props.description}</p>
                                     <h4>{this.props.price} $</h4>
-                                <button className='btn-pos'>Edit</button>
+                                    <Link to="/edititem">
+                                        <button type="button" className='btn-pos' onClick={this.sendCookie}>
+                                              Edit
+                                        </button>
+                                    </Link>
                                 <button className='btn-pos' onClick={this.deleteItemUtil}>Delete</button>
                     </div>
         )
