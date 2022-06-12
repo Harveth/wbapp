@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import './AddItem.css'
 import axios from "axios";
+import { Stack } from "react-bootstrap";
 const SERVER = "http://localhost:6969";
 
 class AddItem extends Component{
@@ -58,23 +59,30 @@ class AddItem extends Component{
 
       render() {
       return (
-      <div className="container">
+      <body className="vhcntr">
+      <div className="add-container col-md-5">
               <h1> Add a new Item  </h1>
               
-              <div className="item-container">
-                <h2>Name</h2>
-                <input type="text" placeholder="Name" onChange={this.onNameChange}/>
-                <h2>price</h2>
-                <input type="text" placeholder="price" onChange={this.onPriceChange}/><br/>
-                <h2>type</h2>
-                <input type="text" placeholder="type" onChange={this.ontypeChange}/>
-                <h2>description</h2>
-                <input type="text" placeholder="description" onChange={this.onDescriptionChange}/>
-
-                <button onClick={this.addNewItem}>Add</button>
-  
-              </div>
+              <Stack className="item-container">
+                <div>
+                <input type="text" className="add-box" placeholder="Name" onChange={this.onNameChange}/>
+                </div>
+                <div>
+                <input type="text" className="add-box" placeholder="price" onChange={this.onPriceChange}/>
+                </div>
+                <div>
+                <input type="text" className="add-box" placeholder="type" onChange={this.ontypeChange}/>
+                </div>
+                <div>
+                <input type="text" className="add-box" placeholder="description" onChange={this.onDescriptionChange}/>
+                </div>
+                <div>
+                <button className="add-btn" onClick={this.addNewItem}>Add</button>
+                </div>
+                
+              </Stack>
       </div>
+      </body>
         );
     }
 }
