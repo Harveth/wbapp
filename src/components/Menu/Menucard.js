@@ -3,9 +3,6 @@
 import'./menuCard.css'
 import axios from "axios";
 import { Component } from 'react';
-import { Navigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import EditItem from '../EditItem/EditItem';
 import { withCookies, Cookies } from "react-cookie";
 import {instanceOf} from "prop-types";
 const SERVER = "http://localhost:6969";
