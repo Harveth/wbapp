@@ -1,0 +1,38 @@
+.edit-container{
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
+    padding:21px;
+    margin: 8% auto 0;
+    border-radius: 20px;
+}
+.edit-container h1{
+    text-align: center;
+}
+.edcntr{
+    min-height: 100vh;
+}
+.edit-box{
+    border-radius: 20px;
+    padding: 9px;
+    margin: 5px 0;
+    align-self: center;
+    width: 90%;
+    border: 1.5px solid #999;
+    outline: none;
+}
+.itm-child{
+    margin-right:20px;
+}
+.edit-btn{
+    background-color: rgb(0, 128, 233);
+    color: rgb(255, 255, 255);
+    width:70%;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    align-self: center;
+    border:none;
+    outline: none;
+    cursor:pointer;
+}

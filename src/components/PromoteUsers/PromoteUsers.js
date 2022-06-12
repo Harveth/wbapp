@@ -1,6 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import PromoteUserCard from "../PromoteUsersCard/PromoteUserCard";
+import './PromoteUsers.css'
 const SERVER = "http://localhost:6969";
 
 
@@ -79,7 +80,7 @@ class PromoteUsers extends Component {
         return (
         <div className="container">
                 <h1> Users: </h1>
-                <input type="text" placeholder="Search Items" className="srchbar" onChange={this.onSearchChange}/>
+                <input type="text" placeholder="Search by username" className="srchbar" onChange={this.onSearchChange}/>
 
                 <div className="item-container row">
                 {rows}

@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { withCookies, Cookies } from "react-cookie";
 import {instanceOf} from "prop-types";
+import './PromoteUserCard.css'
 const SERVER = "http://localhost:6969";
 
 
@@ -62,7 +63,7 @@ class PromoteUserCard extends Component{
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // window.location.reload(false);
+                window.location.reload(false);
                
               }
           });
@@ -79,7 +80,7 @@ class PromoteUserCard extends Component{
               } else {
                 console.log("loggin response");
                 console.log(res.data);
-                // window.location.reload(false);
+                window.location.reload(false);
                
               }
           });
@@ -92,8 +93,8 @@ class PromoteUserCard extends Component{
                                     <h1>{this.props.id}</h1> 
                                     <p>{this.props.username}</p>
                                     <h4>{this.props.type}</h4>
-                                <button className='btn-pos' onClick={this.PromoteToCashier}>Promote To Cashier</button>
-                                <button className='btn-pos' onClick={this.PromoteToQualityControl}>Promote To Quality-Control</button>
+                                <button className='prm-pos' onClick={this.PromoteToCashier}>Promote To Cashier</button>
+                                <button className='prm-pos' onClick={this.PromoteToQualityControl}>Promote To Quality-Control</button>
                     </div>
         )
    }
