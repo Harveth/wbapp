@@ -16,6 +16,7 @@ import Cart from './components/Cart/Cart';
 import AddItem from './components/AddItem/AddItem';
 import EditItem from './components/EditItem/EditItem';
 import CashierOrders from './components/CashierOrders/CashierOrders'
+import PromoteUsers from './components/PromoteUsers/PromoteUsers'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -91,6 +92,7 @@ class App extends Component {
             <Route path='/additem' element={<AddItem/>}/>
             <Route path='/edititem' element={<EditItem/>}/>
             <Route path='/cashierorders' element={<CashierOrders/>}/>
+            <Route path='/promoteusers' element={<PromoteUsers/>}/>
             <Route path='*' element={<Not_Found/>} />
           </Routes>
           </div>

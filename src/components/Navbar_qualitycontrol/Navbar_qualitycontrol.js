@@ -56,7 +56,7 @@ class Navbar_qualitycontrol extends Component {
               <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Reports</Link>
             </li>
             <li className='nav-item'>
-              <Link to="/gallery" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Promote Users</Link>
+              <Link to="/promoteusers" style={{ textDecoration: "none" }}><BiPhotoAlbum className="navicon" />Promote Users</Link>
             </li>
             </ul>
             <ul className='navbar-nav ms-2 ms-lg me-5 mb-4'>
