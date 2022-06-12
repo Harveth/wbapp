@@ -1,6 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
 import PromoteUserCard from "../PromoteUsersCard/PromoteUserCard";
+import './PromoteUsers.css'
 const SERVER = "http://localhost:6969";
 
 

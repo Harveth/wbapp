@@ -2,6 +2,8 @@ import { Component } from "react";
 import axios from "axios";
 import { withCookies, Cookies } from "react-cookie";
 import {instanceOf} from "prop-types";
+import './EditItem.css'
+import { Stack } from "react-bootstrap";
 const SERVER = "http://localhost:6969";
 
 
@@ -70,23 +72,20 @@ class EditItem extends Component{
 
       render() {
       return (
-      <div className="container">
+        <body className="edcntr">
+      <div className="edit-container col-md-5">
               <h1>  Edit Item  </h1>
               
-              <div className="item-container">
-                <h2>Name</h2>
-                <input type="text" placeholder="New Name" onChange={this.onNameChange} value={this.state.name}/>
-                <h2>price</h2>
-                <input type="text" placeholder="New price" onChange={this.onPriceChange} value={this.state.price}/><br/>
-                <h2>type</h2>
-                <input type="text" placeholder="New type" onChange={this.ontypeChange} value={this.state.type}/>
-                <h2>description</h2>
-                <input type="text" placeholder="New description" onChange={this.onDescriptionChange} value={this.state.description}/>
-
-                <button onClick={this.editItem}>Edit</button>
+              <Stack className="item-container">
+                <input type="text" className="edit-box" placeholder="New Name" onChange={this.onNameChange} value={this.state.name}/>
+                <input type="text" className="edit-box" placeholder="New price" onChange={this.onPriceChange} value={this.state.price}/>
+                <input type="text" className="edit-box" placeholder="New type" onChange={this.ontypeChange} value={this.state.type}/>
+                <input type="text" className="edit-box" placeholder="New description" onChange={this.onDescriptionChange} value={this.state.description}/>
+                <button className="edit-btn" onClick={this.editItem}>Edit</button>
   
-              </div>
+              </Stack>
       </div>
+      </body>
         );
     }
 }
