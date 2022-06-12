@@ -4,6 +4,7 @@ import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
 import { Component } from "react";
 import axios from "axios";
+import $ from "jquery";
 const SERVER = "http://localhost:6969";
 class item {
   constructor(id, name, description, rating) {
@@ -129,7 +130,8 @@ class Menu extends Component {
   };
   removeAllFromCart = () => {
     const { cookies } = this.props;
-    cookies.set("cart", "", { path: "/" });
+    let currCart = [];
+    cookies.set("cart", JSON.stringify(currCart), { path: "/" });
   };
   render() {
     const { cookies } = this.props;
@@ -284,7 +286,7 @@ class Menu extends Component {
           </div>
         </nav>
 
-        <div className="types" id="drinks">       
+        <div className="types" id="drinks">
         <h1>Drinks:</h1>
         {drinks}
         </div>

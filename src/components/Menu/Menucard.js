@@ -22,8 +22,82 @@ class Menucard extends Component{
             isEdit: false
         }
       }
+      state = {
+        cart: this.props.cookies.get("cart") || "",
+      };
+      doesInclude = (currCart, foodID) => {
+        for (let i = 0; i < currCart.length; i++) {
+          if (currCart[i].foodID === foodID) {
+            return true;
+          }
+        }
+        return false;
+      };
+      indexOfFood = (currCart, foodID) => {
+        for (let i = 0; i < currCart.length; i++) {
+          if (currCart[i].foodID === foodID) {
+            return i;
+          }
+        }
+        return -1;
+      };
+      addToCart = (foodID, foodName, singleFoodPrice, foodImage) => {
+        const { cookies } = this.props;
+        let currCart = cookies.get("cart");
+        console.log(currCart);
+        if (currCart === null || currCart === undefined) {
+          currCart = [];
+        } else {
+          // currCart = JSON.parse(currCart);
+        }
+        if (!this.doesInclude(currCart, foodID)) {
+          currCart.push({ foodID: foodID, quantity: 1, foodName: foodName, singleFoodPrice: singleFoodPrice, foodImage: foodImage });
+        } else if (this.doesInclude(currCart, foodID)) {
+          currCart[this.indexOfFood(currCart, foodID)].quantity =
+            currCart[this.indexOfFood(currCart, foodID)].quantity + 1;
+        }
 
+        cookies.set("cart", JSON.stringify(currCart), { path: "/" });
+      };
 
+      removeItemFromCart = (foodID) => {
+        const { cookies } = this.props;
+        let currCart = cookies.get("cart");
+        if (currCart === null || currCart === undefined) {
+          currCart = [];
+        } else {
+          // currCart = JSON.parse(currCart);
+        }
+        if (!this.doesInclude(currCart, foodID)) {
+          return;
+        } else if (this.doesInclude(currCart, foodID)) {
+          currCart[this.indexOfFood(currCart, foodID)].quantity =
+            currCart[this.indexOfFood(currCart, foodID)].quantity - 1;
+          if (currCart[this.indexOfFood(currCart, foodID)].quantity === 0) {
+            currCart.splice(this.indexOfFood(currCart, foodID), 1);
+          }
+        }
+        cookies.set("cart", JSON.stringify(currCart), { path: "/" });
+      };
+      removeAllItemFromCart = (foodID) => {
+        const { cookies } = this.props;
+        let currCart = cookies.get("cart");
+        if (currCart === null || currCart === undefined) {
+          currCart = [];
+        } else {
+          // currCart = JSON.parse(currCart);
+        }
+        if (!this.doesInclude(currCart, foodID)) {
+          return;
+        } else if (this.doesInclude(currCart, foodID)) {
+            currCart.splice(this.indexOfFood(currCart, foodID), 1);
+        }
+        cookies.set("cart", JSON.stringify(currCart), { path: "/" });
+      };
+      removeAllFromCart = () => {
+        const { cookies } = this.props;
+        cookies.set("cart", "", { path: "/" });
+      };
     deleteItem = async (id) => {
         console.log("deleting in progress")
         await axios
@@ -37,11 +111,11 @@ class Menucard extends Component{
                 console.log("loggin response");
                 console.log(res.data);
                 window.location.reload(false);
-               
+
               }
           });
       };
-    
+
       deleteItemUtil = () =>{
         this.deleteItem(this.props.id);
       }
@@ -62,7 +136,7 @@ class Menucard extends Component{
             <section className="menuu wrapper" id="menuu">
                 <div className="box-container col">
                     <div className="box" style={{backgroundColor:'rgb(0,0,0,0.7)'}}>
-                    <div className='image'>    
+                    <div className='image'>
                                 <img src={this.props.image} alt="food image" />
                             </div>
                             <div className="content">
@@ -70,15 +144,15 @@ class Menucard extends Component{
                         <h3>{this.props.type}</h3>
                         <p>{this.props.description}</p>
                         <h4>{this.props.price} $</h4>
-                        <button className="btn" style={{ backgroundColor: 'goldenrod' }} onClick={() => this.addToCart(1)}>Add To Cart</button>
+                        <button className="btn" style={{ backgroundColor: 'goldenrod' }} onClick={() => this.addToCart(this.props.id, this.props.name, this.props.price, this.props.image)}>Add To Cart</button>
                                 {/* <Link to="/edititem" onClick={this.sendCookie}>Edit</Link>
 
-                                
- 
+
+
                                 <button onClick={this.deleteItemUtil}>--Delete</button> */}
                                 </div>
                     </div>
-                            
+
                 </div>
             </section>
         )
@@ -100,9 +174,9 @@ export default withCookies(Menucard);
 //               <h3>{this.props.name}</h3>
 //               <p>{this.props.description}</p>
 //               <p className="price">{this.props.price}</p>
-             
+
 //             </div>
-        
+
 //           </div>
 //         </div>
 //         </section>
