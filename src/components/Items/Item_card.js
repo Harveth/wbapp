@@ -56,7 +56,7 @@ class Item_card extends Component{
 
    render(){
         return(
-                    <div className="itms_col col">   
+                    <div className="itms_col col mw-25">   
                                 <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/processed-food700-350-e6d0f0f.jpg?quality=90&resize=556,505" className="itm-img" alt="food image" />
                                     <h1>{this.props.foodName}</h1> 
                                     <p>{this.props.description}</p>
