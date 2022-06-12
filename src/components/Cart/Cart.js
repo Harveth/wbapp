@@ -62,13 +62,14 @@ class Cart extends Component {
       }
 
     checkout(){
+         console.log(this.props);
         let currCart = this.getFoodFromCart();
         axios.post(`http://localhost:6969/ServerPHP/makeorder.php`, {
             currCart: currCart,
-            userId: 153
+            userId: this.props.id
         }).then(res => {
             if(res.data == 'no'){
-                console.log('error');
+                console.log('problem doing things');
             }
             else {
                 console.log(res.data);
