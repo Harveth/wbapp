@@ -12,10 +12,37 @@ class AddItem extends Component{
           name: '',
           price: '',
           type: '',
-          description: ''
-    
+          description: '',
+          img:''
         }
       }
+      uploadFile = () => {  // upload files to server
+
+        let returnData;
+        const file = document.getElementById("actual-btn").files[0];
+        const formData = new FormData();
+        formData.append("foodpic", file);
+        axios
+          .post(`${SERVER}/ServerPHP/imgupload.php`, formData, {
+            headers: {
+              "Content-Type": "multipart/form-data"
+            }
+          })
+          .then(res => {
+            console.log("hellooooooo");
+
+            console.log(res.data);
+            this.setState({img: res.data});
+            setTimeout(this.addNewItem, 3000);
+            console.log("hellooooooo");
+
+            console.log(this.state.img);
+            return res.data;
+          })
+
+
+      }
+      
 
       onNameChange = (event) =>{
         this.setState({name : event.target.value});
@@ -44,6 +71,7 @@ class AddItem extends Component{
             price: this.state.price,
             type: this.state.type,
             description: this.state.description,
+            itemPic: this.state.img
           })
           .then((res) => {
             if (res.data == "error") {
@@ -83,10 +111,14 @@ class AddItem extends Component{
                 <input type="text" className="add-box" placeholder="description" onChange={this.onDescriptionChange}/>
                 </div>
                 <div>
-                <Link to="/items">
-                <button className="add-btn" onClick={this.addNewItem}>Add
+                <input type="file" id="actual-btn" hidden />
+                 <label for="actual-btn" className="lbl-btn">
+                  Choose File
+                 </label>
+                </div>
+                <div>
+                <button className="add-btn" onClick={this.uploadFile}>Add
                 </button>
-                </Link>
                 </div>
                 
               </Stack>

@@ -51,7 +51,8 @@ class Menu extends Component {
               price: res.data[i].price,
               image: res.data[i].image,
             };
-            console.log(res.data[i].description);
+            console.log("hiiiiiiiiiiiiiiii");
+            console.log(res.data[i].image);
             this.setState(
               (prevState) => ({
                 items: [...prevState.items, item],
