@@ -74,6 +74,7 @@ class Signup extends Component {
           console.log(res.data);
           this.props.sendData(res.data.username);
           this.setState({ signUpSuccessful: true });
+          
         }
       });
   };

@@ -9,7 +9,13 @@ class Cart extends Component {
         cookies: instanceOf(Cookies).isRequired
       };
 
-
+      constructor(props){
+        super(props);
+        this.state = {
+          
+    
+        }
+      }
     getFoodFromCart(){
         const { cookies } = this.props;
         let currCart = cookies.get("cart");
@@ -58,7 +64,8 @@ class Cart extends Component {
     checkout(){
         let currCart = this.getFoodFromCart();
         axios.post(`http://localhost:6969/ServerPHP/makeorder.php`, {
-            currCart: currCart
+            currCart: currCart,
+            
         }).then(res => {
             if(res.data == 'no'){
                 console.log('error');
@@ -71,6 +78,8 @@ class Cart extends Component {
 
     render() {
         let currCart = this.getFoodFromCart();
+        console.log("loggin id")
+        console.log(this.props.id);
       return (
 
         <div className="smol-container cart-pg">
