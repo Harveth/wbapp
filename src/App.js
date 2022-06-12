@@ -31,7 +31,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: 'quality_control',
+      type: 'client',
       isAccountActive: false
 
     }
