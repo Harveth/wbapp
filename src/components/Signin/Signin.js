@@ -1,6 +1,8 @@
 import { Component } from 'react';
+import { Navigate } from 'react-router-dom';    
 import "./Signin.css";
 import axios from 'axios';
+
 
 const SERVER = 'http://localhost:6969';
 class Signin extends Component{
@@ -9,6 +11,8 @@ class Signin extends Component{
         this.state = {
             signInUsername: '',
             signInPassword: '',
+            signInId: '',
+            signInSuccessful: false
         }
     }
 
@@ -22,6 +26,9 @@ class Signin extends Component{
             }
             else {
                 console.log(res.data);
+                
+                this.props.sendData(this.state.signInUsername, res.data.id);
+                this.setState({signInSuccessful: true});
             }
         })
     }
@@ -60,6 +67,9 @@ class Signin extends Component{
 
     on
     render(){
+        if(this.state.signInSuccessful){
+            return <Navigate to="/"/>
+        }
         return(
             <body className="bgrnd">
             <div className="Signup-Inputs">

@@ -63,7 +63,7 @@ class EditItem extends Component{
             } else {
                 console.log("logging response")
               console.log(res.data);
-              
+              alert("Successfuly edited item, please go back!")
             }
           });
       };

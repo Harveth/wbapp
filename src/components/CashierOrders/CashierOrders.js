@@ -11,7 +11,7 @@ class CashierOrders extends Component {
       super(props);
       this.state = {
         orders: [
-            
+           
         ],
         searchString: ''
       };

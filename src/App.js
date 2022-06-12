@@ -31,7 +31,7 @@ class App extends Component {
       id: '',
       username: '',
       email: '',
-      type: 'cashier',
+      type: 'client',
       isAccountActive: false
 
     }
@@ -54,8 +54,17 @@ class App extends Component {
     console.log(usernam);
     this.setState({username: usernam}, () => { console.log(this.state)});
     this.setState({isAccountActive: false});
-    //console.log(this.state);
+    console.log(this.state);
   }
+
+  getDataFromSignIn = (usernam, id) =>{
+    console.log(usernam);
+    this.setState({username: usernam}, () => { console.log(this.state)});
+    this.setState({id: id}, () => { console.log(this.state)});
+    this.setState({isAccountActive: false});
+    console.log(this.state);
+  }
+
 
   changeToCashier = () =>{
     this.setState({type: 'cashier'});
@@ -85,10 +94,10 @@ class App extends Component {
             <Route path='/menu' element={<Menu/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
             <Route path='/account' element={<Account id={this.state.id}/>}/>
-            <Route path='/signin' element={<Signin/>}/>
+            <Route path='/signin' element={<Signin sendData={this.getDataFromSignIn} />}/>
             <Route path='/signup' element={<Signup sendData={this.getDataFromSignUp}/>}/>
             <Route path='/items' element={<Items/>}/>
-            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/cart' element={<Cart id={this.state.id}/>}/>
             <Route path='/additem' element={<AddItem/>}/>
             <Route path='/edititem' element={<EditItem/>}/>
             <Route path='/cashierorders' element={<CashierOrders/>}/>
